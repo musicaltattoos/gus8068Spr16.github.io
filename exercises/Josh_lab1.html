@@ -33,12 +33,10 @@
     		.bindPopup('Abington Senior Highschool.<br> I attended Abington for my entire highschool career.')
     		.openPopup();
     		
-    		stadium = L.marker([40.112590,-75.132858])
+    		stadium = L.marker([40.112590,-75.132858]).addTo(map)
     		.bindPopup('<button class = "trigger">Stadium I played football in.<br> I played safety and wide receiver.</button>')
-    		.addTo(map);
-    		$('#map').on('click', '.trigger', function() {
-    		alert('Hello!');
-		});
+    		.openPopup();
+    		
 	</script>
 </body>
 </html>
