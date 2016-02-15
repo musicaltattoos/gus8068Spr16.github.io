@@ -17,25 +17,28 @@
     		.bindPopup('Nazareth Hostpital.<br> Where I was born.')
     		.openPopup();
     		
-    		L.marker([40.063771,-75.026373]).addTo(map)
+    		city_home = L.marker([40.063771,-75.026373]).addTo(map)
     		.bindPopup('First House I lived in.<br> Located between I-95 and Roosevelt Boulevard.')
     		.openPopup();
     		
-    		L.marker([40.111110,-75.146263]).addTo(map)
+    		suburb_home = L.marker([40.111110,-75.146263]).addTo(map)
     		.bindPopup('First house outside of the city.<br> More grass and less people.')
     		.openPopup();
     		
-    		L.marker([40.113328,-75.147991]).addTo(map)
+    		last_suburb = L.marker([40.113328,-75.147991]).addTo(map)
     		.bindPopup('Last House I lived in before leaving for college.<br> Not as nice as other houses I have lived in, but it got the job done.')
     		.openPopup();
     		
-    		L.marker([40.112139,-75.131815]).addTo(map)
+    		highschool = L.marker([40.112139,-75.131815]).addTo(map)
     		.bindPopup('Abington Senior Highschool.<br> I attended Abington for my entire highschool career.')
     		.openPopup();
     		
-    		L.marker([40.112590,-75.132858]).addTo(map)
-    		.bindPopup('Stadium I played football in.<br> I played safety and wide receiver.')
-    		.openPopup();
+    		stadium = L.marker([40.112590,-75.132858]).addTo(map).on('', onClick);
+    		function onClick(stadium){
+    			alert('Stadium I played football in.<br> I played safety and wide receiver.')
+    		}
+    		}
+    		
 	</script>
 </body>
 </html>
