@@ -7,10 +7,10 @@
 	Josh's life!
 	<div id='map' style="height:800px; width:1200px"></div>
 	<script>
-		var map = L.map('map').setView([40.112139,-75.131815], 10);
+		var map = L.map('map').setView([40.112139,-75.131815], 13);
 
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+    		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'maxZoom: 18
 		}).addTo(map);
 
 		L.marker([40.059417,-75.041380]).addTo(map)
