@@ -8,7 +8,7 @@
 <p> Aminal Saver Mapping Application </p>
 <body>
 	
-	<div id='map' style="height:400px; width:600px"></div>
+	<div id='map' style="height:300px; width:300px"></div>
 	<script>
 	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
