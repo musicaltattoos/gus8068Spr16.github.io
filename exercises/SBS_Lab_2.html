@@ -12,10 +12,13 @@
 	<div id='map' style="height:400px; width:600px"></div>
 	<script>
 	
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
 		var map = L.map('map').setView([40.002931,-75.2382967], 13);
 		
 		var marker = L.marker([39.952172, -75.143401]).addTo(map);
-		marker.bindPopup("<b>Philadelphia Animal Welfare Society (PAWS)</b><br>Address 100 N 2nd St, Philadelphia, PA 19106<br>
+		marker.bindPopup("<b>P.A.W.S</b><br>Address 100 N 2nd St, Philadelphia, PA 19106<br>
 Phone (215) 238-9901<br> ").openPopup();
 
                 var marker = L.marker([39.944248, -75.162749]).addTo(map);
@@ -60,9 +63,7 @@ Phone:(267) 289-2729<br> ").openPopup();
 	       	  marker.bindPopup("<b>Philadelphia Community Cats Council</b><br>Address: Everywhere Philadelphia<br>
 Phone:N/A<br> ").openPopup();
 
-	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-		}).addTo(map);
+	
 
 		 
 
