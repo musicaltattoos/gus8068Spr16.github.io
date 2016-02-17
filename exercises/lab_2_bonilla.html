@@ -4,7 +4,7 @@
     <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </head>
 <body>
-  Philly Construction Projects
+  <b></b>Philly Construction Projects</b>
   <div id='map' style="height:800px; width:1200px"></div>
       <script>
             var map = L.map('map').setView([39.952456, -75.163565], 13);
@@ -14,7 +14,10 @@
             }).addTo(map);
             
             comcast = L.marker([39.955241,-75.170423]).addTo(map)
-    		    .bindPopup('Comcast Innovation and Technology Center.<br> The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018..');
+            .bindPopup('CITC, Center City West<br> The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018.');
+            
+            SLS = L.marker([39.946752,-75.164491]).addTo(map)
+            .bindPopup('SLS Lux, Avenue of the Arts<br> Commissioned by Dranoff Properties, the 47 story tower broke ground in Spring of 2015. It will feature 125 condos and 150 hotel rooms, combining a four or five star hotel with uber-luxe condos and entertainment space.');
             
       </script>
 </body>
