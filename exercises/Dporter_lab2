@@ -12,18 +12,9 @@
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map)
 	
-		var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [39.94408, -75.208878]
-    }
-}L.geoJson(geojsonFeature).addTo(map);	
+		L.marker([39.94408, -75.208878]).addTo(map)
+   	.bindPopup('Alexander Wilson ELementary School.')
+    	.openPopup();	
 	</script>
 </body>
 </html>
