@@ -9,15 +9,12 @@
       <script>
             var map = L.map('map').setView([39.952456, -75.163565], 13);
             
-            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
-            maxZoom: 18,
-            id: 'your.mapbox.project.id',
-            accessToken: 'your.mapbox.public.access.token'
+            L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', 
+            {
+              attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+              maxZoom: 18,
+              minZoom: 6,
             }).addTo(map);
-            
-            comcast = L.marker([39.955241, -75.170423]).addTo(map);
-            marker.bindPopup("<b>Comcast Innovation and Technology Center</b><br>The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018.").openPopup();
             
       </script>
 </body>
