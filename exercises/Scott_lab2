@@ -7,7 +7,7 @@
  
 
 <body>
-	Map of Philadelphia Schools Closed in 2013
+	Philadelphia's Best Schools & Demographics
 	<div id='map' style="height:400px; width:600px"></div>
 	<script>
 		var map = L.map('map').setView([39.9588, -75.1676], 15);
