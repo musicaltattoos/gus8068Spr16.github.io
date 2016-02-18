@@ -9,6 +9,7 @@
 <body>
 	<h1>Philadelphia's Best Schools & Demographics</h1>
 	<div id='map' style="height:600px; width:1000px"></div>
+	
 	<script>
 		var map = L.map('map').setView([40.002498, -75.1957877], 13);
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -16,11 +17,11 @@
 		}).addTo(map)
 	
 	Powel = L.marker([39.9603237, -75.1957877]).addTo(map)
-       .bindPopup("<b>Samuel Powel School</b> - SPP Score: 85.8
+       .bindPopup('<b>Samuel Powel School</b> - SPP Score: 85.8
        <br>Black-74.4%
        <br>White-9.2%
        <br>Asian-4.1%
-       <br>Other-11.6%");
+       <br>Other-11.6%');
    	
 	</script>
 </body>
