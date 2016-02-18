@@ -1,0 +1,13 @@
+<html>
+<head>
+
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+</head>
+h1 {color: blue; margin-left 50px;}
+
+<body>
+  <h1> Schools I Have Attended in Bucks County </h1>
+  
+  <div id='map' style="height:400px; width:600px"></div>
