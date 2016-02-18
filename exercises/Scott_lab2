@@ -4,7 +4,7 @@
  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
  </head>
  <body>
-      <h1> Best schools in Philadelphia & Demographics </h1>
+      <h1> Best Schools in Philadelphia & Demographics </h1>
  <div id='map' style="height:800px; width:1200px"></div>
  <script>
         var map = L.map('map').setView([40.002498, -75.1180329], 13);
