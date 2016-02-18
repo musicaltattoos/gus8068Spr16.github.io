@@ -17,7 +17,7 @@
 		}).addTo(map)
 	
 	L.marker([39.9603237, -75.1957877]).addTo(map)
-       .bindPopup('Samuel Powel School');
+       .bindPopup('<b>Samuel Powel School</b>');
    	
 	</script>
 </body>
