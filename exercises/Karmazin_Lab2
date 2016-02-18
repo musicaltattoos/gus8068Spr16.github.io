@@ -39,4 +39,32 @@ h1 {color: blue; margin-left 50px;}
     L.marker([40.175977, -74.835266]).addTo(map)
     .bindPopup("Village Park Elementary");
     
+    L.marker([40.171686, -74.821386]).addTo(map)
+    .bindPopup("Manor Elementary");
+    
+    L.marker([40.162650, -74.818029]).addTo(map)
+    .bindPopup("Penn Valley Elementary");
+    
+    L.marker([40.153828, -74.818777]).addTo(map)
+    .bindPopup("Walt Disney Elementary");
+    
+    L.marker([40.211427, -74.830026]).addTo(map)
+    .bindPopup("William Penn Middle School");
+    
+    L.marker([40.208780, -74.827350]).addTo(map)
+    .bindPopup("Charles Boehm Middle School");
+    
+    L.marker([40.211795, -74.823230]).addTo(map)
+    .bindPopup("Pennwood Middle School");
+    
+    L.marker([40.173594, -74.836249]).addTo(map)
+    .bindPopup("Pennsbury High School East");
+    
+    L.marker([40.177316, -74.842633]).addTo(map)
+    .bindPopup("Pennsbury High School West");
+    
+  </script>
+</body>
+</html>
+    
     
