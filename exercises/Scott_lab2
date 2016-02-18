@@ -15,8 +15,12 @@
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map)
 	
-		L.marker([39.94408, -75.208878]).addTo(map)
-   	.bindPopup('Alexander Wilson Elementary School.');
+	Powel = L.marker([39.9603237, -75.1957877]).addTo(map)
+       .bindPopup("<b>Samuel Powel School</b> - SPP Score: 85.8
+       <br>Black-74.4%
+       <br>White-9.2%
+       <br>Asian-4.1%
+       <br>Other-11.6%").openPopup();
    	
 	</script>
 </body>
