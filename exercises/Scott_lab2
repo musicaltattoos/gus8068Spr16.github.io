@@ -21,6 +21,11 @@
 
 	L.marker([39.9531367, -75.2105261]).addTo(map)
 	 .bindPopup('<b>Penn-Alexander School School</b>')  	
+	
+	L.marker([39.9446123, -75.1547804]).addTo(map)
+	.bindPopup('<b>McCall School</b>')  
+	
+	
 	</script>
 </body>
 
