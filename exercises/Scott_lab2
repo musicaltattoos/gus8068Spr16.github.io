@@ -16,7 +16,7 @@
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map)
 	
-	Powel = L.marker([39.9603237, -75.1957877]).addTo(map)
+	L.marker([39.9603237, -75.1957877]).addTo(map)
        .bindPopup('Samuel Powel School');
    	
 	</script>
