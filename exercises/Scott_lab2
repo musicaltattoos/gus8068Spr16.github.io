@@ -20,7 +20,7 @@
        <br>Black-74.4%
        <br>White-9.2%
        <br>Asian-4.1%
-       <br>Other-11.6%").openPopup();
+       <br>Other-11.6%");
    	
 	</script>
 </body>
