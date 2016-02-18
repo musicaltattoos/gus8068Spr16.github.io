@@ -8,6 +8,35 @@
 h1 {color: blue; margin-left 50px;}
 
 <body>
-  <h1> Schools I Have Attended in Bucks County </h1>
+  <h1> Schools within Pennsbury School District </h1>
   
   <div id='map' style="height:400px; width:600px"></div>
+  
+  <script>
+    var map = L.map('map').setView([40.189642, -74.817786], 15); 
+      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+    L.marker([40.245704, -74.876651]).addTo(map)
+    .bindPopup("Afton Elementary");
+    
+    L.marker([40.246121, -74.873373]).addTo(map)
+    .bindPopup("Quarry Hill Elementary");
+    
+    L.marker([40.229163, -74.837700]).addTo(map)
+    .bindPopup("Edgewood Elementary");
+    
+    L.marker([40.226411, -74.820705]).addTo(map)
+    .bindPopup("Makefield Elementary");
+    
+    L.marker([40.203995, -74.826370]).addTo(map)
+    .bindPopup("Eleanor Roosevelt Elementary");
+    
+    L.marker([40.178342, -74.851167]).addTo(map)
+    .bindPopup("Oxford Valley Elementary");
+    
+    L.marker([40.175977, -74.835266]).addTo(map)
+    .bindPopup("Village Park Elementary");
+    
+    
