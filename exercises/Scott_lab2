@@ -17,11 +17,7 @@
 		}).addTo(map)
 	
 	Powel = L.marker([39.9603237, -75.1957877]).addTo(map)
-       .bindPopup('<b>Samuel Powel School</b> - SPP Score: 85.8
-       <br>Black-74.4%
-       <br>White-9.2%
-       <br>Asian-4.1%
-       <br>Other-11.6%');
+       .bindPopup('Samuel Powel School');
    	
 	</script>
 </body>
