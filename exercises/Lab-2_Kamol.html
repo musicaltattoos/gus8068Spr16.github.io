@@ -1,7 +1,6 @@
 <html>
 <head>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </head>
 <body>
 
@@ -12,6 +11,7 @@
 	
 	<h1><font color = "red">Important Place for me in Bangladesh</font></h1>
 	<div id='map' style="height:800px; width:1100px"></div>
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 <script>
 		var map = L.map('map').setView([22.847185, 89.537649], 15);
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
@@ -26,9 +26,9 @@
     		
     		var Secondary_School = L.marker([22.812752,89.574069]).addTo(map).bindPopup('Khulna Zilla School.<br>Where I have studied from 3rd gread to 10th gread.</br>').openPopup();
     		
-    		var Birth_Place = L.marker([22.809471,89.562785]).addTo(map).bindPopup('Govt M M City College.<br>I have completed my high school diploma here.</br>').openPopup();
+    		var higher_secondary = L.marker([22.809471,89.562785]).addTo(map).bindPopup('Govt M M City College.<br>I have completed my high school diploma here.</br>').openPopup();
     		
-    		var Birth_Place = L.marker([22.802662,89.534605]).addTo(map).bindPopup('Khulna University.<br>First Federal University in Khulna Division that established on 1991.</br>').openPopup();
+    		var khulna_uni = L.marker([22.802662,89.534605]).addTo(map).bindPopup('Khulna University.<br>First Federal University in Khulna Division that established on 1991.</br>').openPopup();
     		
     		var Dhaka_Airport = L.marker([22.447105,89.390267]).addTo(map).bindPopup('Hazarat Shahjalal International Airport.<br> It was the only international airport till 2005.</br>').openPopup();
     		
