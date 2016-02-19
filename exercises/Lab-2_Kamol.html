@@ -13,7 +13,7 @@
 	<div id='map' style="height:800px; width:1100px"></div>
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 <script>
-		var map = L.map('map').setView([22.847185, 89.537649], 10);
+		var map = L.map('map').setView([22.847185, 89.537649], 8);
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
@@ -30,7 +30,7 @@
     		
     		var khulna_uni = L.marker([22.802662,89.534605]).addTo(map).bindPopup('Khulna University.<br>First Federal University in Khulna Division that established on 1991.</br>').openPopup();
     		
-    		var Dhaka_Airport = L.marker([22.447105,89.390267]).addTo(map).bindPopup('Hazarat Shahjalal International Airport.<br> It was the only international airport till 2005.</br>').openPopup();
+    		var Dhaka_Airport = L.marker([23.846293,90.401929]).addTo(map).bindPopup('Hazarat Shahjalal International Airport.<br> It was the only international airport till 2005.</br>').openPopup();
     		
     		
 </script>
