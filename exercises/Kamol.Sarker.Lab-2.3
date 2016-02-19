@@ -6,20 +6,39 @@
 <body>
 
 	<style> 
-	body{ background-color:0066FF;
+	body{ background-color:"006400";
 	}
 	</style>
 	
-	<h1><font color = "green">Important Place for me in Bangladesh</font></h1>
-	<div id='map' style="height:800px; width:1200px"></div>
+	<h1><font color = "red">Important Place for me in Bangladesh</font></h1>
+	<div id='map' style="height:600px; width:1000px"></div>
 	<script>
-		var map = L.map('map').setView([22.847185, 89.537649], 12);
+		var map = L.map('map').setView([22.847185, 89.537649], 10);
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 		
-		Birth_Place = L.marker([22.447105,89.390267]).addTo(map)
-    		.bindPopup('Birth place_Bangladesh.<br> It is a small village called Hodda in southeastern of Bangladesh under the Koira Upozilla.');
+		Birth_Place: = L.marker([22.447105,89.390267]).addTo(map)
+    		.bindPopup('Birth place_Bangladesh.<br>Village called Hodda in southeastern of Bangladesh under the Koira Upozilla.');
+		
+		Sundorban: = L.marker([22.212822,89.249809]).addTo(map)
+    		.bindPopup('Biggest Mangrove froest.<br>Situated at the southwestern part of Bangladesh.');
+	
+		Elementary_School: = L.marker([22.810717,89.576421]).addTo(map)
+    		.bindPopup('Fatima High school.<br>Where I have studied from play to 3rd grade.');
+    		
+    		Secondary_School: = L.marker([22.812752,89.574069]).addTo(map)
+    		.bindPopup('Khulna Zilla School.<br>Where I have studied from 3rd gread to 10th gread.');
+    		
+    		Birth_Place: = L.marker([22.809471,89.562785]).addTo(map)
+    		.bindPopup('Govt M M City College.<br>I have completed my high school diploma here.');
+    		
+    		Birth_Place: = L.marker([22.802662,89.534605]).addTo(map)
+    		.bindPopup('Khulna University.<br>First Federal University in Khulna Division that established on 1991.');
+    		
+    		Dhaka Airport: = L.marker([22.447105,89.390267]).addTo(map)
+    		.bindPopup('Hazarat Shahjalal International Airport.<br> It was the only international airport till 2005.');
+    		
 	</Script>
 </body>
 </html>
