@@ -1,15 +1,14 @@
 <html>
 <head>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 	    
-<style>
+	    <style>
 body {
     background-color: black
 }
-
 h1 {
-    color: red;
+    color: white;
     margin-left: 40px;
 } 
 </style>
@@ -17,19 +16,15 @@ h1 {
 
 <title>Philadelphia Construction Projects 2016</title>
 
+
 <body>
 <center>
-	
-<font face="Serif" color="#FF0000">Lab 2.1</font><br>
-
-<font face="Serif" color="#FFFFFF">For many years, Philly is a city that has been considered the underdog when it comes to any field (be it sports, finance or entertainment). 
-<br>In recent years, though, this perception has been challenged. The city's real estate market, encouraged by an influx of new residents, has been booming. 
-<br>This newfound revitalization has positive implications for the city, suggesting a bright economic future.</font>
-	
+<font face="Serif" color="#FF0000">Lab 2</font><br>
+<font face="Serif" color="#FFFFFF">For many years, Philly is a city that has been considered the underdog when it comes to any field (be it sports, finance or entertainment). In recent years, though, this perception has been challenged. The city's real estate market, encouraged by an influx of new residents, has been booming. This newfound revitalization has positive implications for the city, suggesting a bright economic future.</font>
 	<div id='map' style="height:1000px; width:1000px"></div>
 	      <script>
-	      
 	            var map = L.map('map').setView([39.952456, -75.163565], 14);
+	            
 	            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	            }).addTo(map);
@@ -50,7 +45,7 @@ h1 {
 	            .bindPopup('<font color="blue">CHOP SCHUYKILL PROJECT</font> <small>Southwest Center City</small><br> Childrens Hospital is planning to develop Schuylkill Avenue into office and research space over the next few decades. The first phase of this involves the erection of a 22-story office tower at the base of Bainbridge Street.');
 	            
 	            cira = L.marker([39.952453,-75.183081]).addTo(map)
-	            .bindPopup('<font color="purple">CIRA SOUTH</font> <small>University City</small><br> This project is a complex of two skyscrapers, consisting of the commercial Cira Walnut Tower and the residential Cira Chestnut Tower. The Cira Chestnut tower is complete.');
+	            .bindPopup('<font color="purple">CIRA SOUTH</font> <small>University City</small><br> This project is a complex of two skyscrapers, consisting of the commercial Cira Walnut Tower and the residential Cira Chestnut Tower. The Cira Chestnut tower is already complete.');
 	            
 	      </script>
 </center>
