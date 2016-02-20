@@ -10,6 +10,11 @@
 		var map = L.map('map').setView([40.0805135,-75.0954428], 13);
 		
 		var hospitalPopup = '<img src="http://www.uhsurology.com/images/sce/LOCATIONS/nazarethX.jpg" width="200" height="200" alt="Origin"><br>Nazareth Hostpital.<br>Where I was born.' 
+		var cityPopup = '<img src="http://p.rdcpix.com/v03/lc197d944-m0xd-w640_h480_q80.jpg" width="200" height="200" alt="Origin"><br>First house I lived in.<br>I moved when I turned 9. This house was nice because there were a lot of kids on the block.'
+		var suburbPopup = '<img src="http://maps.googleapis.com/maps/api/streetview?size=306x306&location=2355%20Jenkintown%20Rd%2C%20Glenside%2C%20PA%2019038&sensor=false&client=gme-scpropertysharksrl&signature=hCpE_pLQSYLR41DtYWNoa-VMWGk" width="200" height="200" alt="Origin">First house outside of the city. Less people and more grass, so it was a bit foreign to me.'
+		var last_suburbPopup = '<img src="http://2.bp.blogspot.com/-tNFbdcDcywk/TkeKYQdgXwI/AAAAAAAAFdo/l5g61wCGSUs/s1600/H.png" width="200" height="200" alt="Origin"><br>Last house I lived in before moving away to college. I had many friends by the time I left, but when I returned home 3 years later, basically everyone was gone.'
+		var highschoolPopup = '<img src="https://travelpenandpalate.files.wordpress.com/2011/01/dsc042911.jpg" width="200" height="200" alt="Origin"><br>This is the highschool I spent 3 years at. I never really enjoyed school, so I do not have the <I wish I was still in Highschool> mentality many people have. However, I do want to attend the reunions.'
+		var stadiumPopup = '<img src="http://www.abington.k12.pa.us/media/2014/07/stephen-a-schwarzman-stadium.jpg" width="200" height="200" alt="Origin">This is the stadium I played football in for 2 years. It was still being built while I was in 10th grade. I played WR and Safety..'
 
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -18,20 +23,20 @@
 		hospital = L.marker([40.059417,-75.041380])
     		.bindPopup(hospitalPopup).addTo(map);
     		
-    		city_home = L.marker([40.063771,-75.026373]).addTo(map)
-    		.bindPopup('First House I lived in.<br> Located between I-95 and Roosevelt Boulevard.');
+    		city_home = L.marker([40.063771,-75.026373])
+    		.bindPopup(cityPopup).addTo(map);
     		
-    		suburb_home = L.marker([40.111110,-75.146263]).addTo(map)
-    		.bindPopup('First house outside of the city.<br> More grass and less people.');
+    		suburb_home = L.marker([40.111110,-75.146263])
+    		.bindPopup(suburbPopup).addTo(map);
     		
-    		last_suburb = L.marker([40.113328,-75.147991]).addTo(map)
-    		.bindPopup('Last House I lived in before leaving for college.<br> Not as nice as other houses I have lived in, but it got the job done.');
+    		last_suburb = L.marker([40.113328,-75.147991])
+    		.bindPopup(Last_suburbPopup).addTo(map);
     		
-    		highschool = L.marker([40.112139,-75.131815]).addTo(map)
-    		.bindPopup('Abington Senior Highschool.<br> I attended Abington for my entire highschool career.');
+    		highschool = L.marker([40.112139,-75.131815])
+    		.bindPopup(highschoolPopup).addTo(map);
     		
-    		stadium = L.marker([40.112590,-75.132858]).addTo(map)
-    		.bindPopup('Stadium I played football in.<br> I played safety and wide receiver.');
+    		stadium = L.marker([40.112590,-75.132858])
+    		.bindPopup(stadiumPopup).addTo(map);
     		
     		
 	</script>
