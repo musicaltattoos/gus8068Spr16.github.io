@@ -21,7 +21,9 @@ h1 {
 <body>
 <center>
 <font face="Serif" color="#FF0000">Lab 2</font><br>
-<font face="Serif" color="#FFFFFF">For many years, Philly is a city that has been considered the underdog when it comes to any field (be it sports, finance or entertainment). In recent years, though, this perception has been challenged. The city's real estate market, encouraged by an influx of new residents, has been booming. This newfound revitalization has positive implications for the city, suggesting a bright economic future.</font>
+<font face="Serif" color="#FFFFFF">For many years, Philly is a city that has been considered the underdog when it comes to any field (be it sports, finance or entertainment). 
+<br>In recent years, though, this perception has been challenged. The city's real estate market, encouraged by an influx of new residents, has been booming. 
+<br>This newfound revitalization has positive implications for the city, suggesting a bright economic future.</font>
 	<div id='map' style="height:1000px; width:1000px"></div>
 	      <script>
 	            var map = L.map('map').setView([39.952456, -75.163565], 14);
@@ -29,9 +31,6 @@ h1 {
 	            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	            }).addTo(map);
-	            
-	            philly = L.marker([39.952456,-75.163565]).addTo(map)
-	            openPopup('Currently, there are an abundance of wide-ranging construction projects spawning within Philadelphia. Developers and institutions are putting the necessary infrastructure in place to support growing population.');
 	            
 	            comcast = L.marker([39.955241,-75.170423]).addTo(map)
 	            .bindPopup('<b>CITC</b> <small>Center City West</small><br> The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018.');
