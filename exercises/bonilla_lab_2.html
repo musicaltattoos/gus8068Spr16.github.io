@@ -30,6 +30,9 @@ h1 {
 	             attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	            }).addTo(map);
 	            
+	            philly = L.marker([39.952456,-75.163565]).addTo(map)
+	            openPopup('Currently, there are an abundance of wide-ranging construction projects spawning within Philadelphia. Developers and institutions are putting the necessary infrastructure in place to support growing population.');
+	            
 	            comcast = L.marker([39.955241,-75.170423]).addTo(map)
 	            .bindPopup('<b>CITC</b> <small>Center City West</small><br> The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018.');
 	              
