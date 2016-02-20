@@ -1,47 +1,45 @@
 <html>
 <head>
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-</head>
-<body>
-	<i><b>Philadelphia Animal Rescue, Shelter and Care Resource Guide</b></i>
-        <div id='map' style="height:400px; width:600px"></div>
-       
-        <script>
+	</head>
+	<style> 
+	body{ background-color:yellow
+	};
+	</style>
+	<body
+	<h><i><font size= "14" color="brown" >PHILADELPHIA ANIMAL RESCUE, SHELTER and CARE RESOURCE GUIDE</font></i></h>
+	<p>Animal Saver Mapping Application</p>
+	<div id='map'style="height:400px; width:600px"></div>
+	<script>
 	// Initialize the map
 	var map = L.map('map').setView([40.002931,-75.2382967], 13);
 	// Load a tile layer
 	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-			attribution:'&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
-		
-		
-	        L.marker([39.952172, -75.143401]).addTo(map)
-		    .bindPopup("<b> P.A.W.S </b> ").openPopup();
-                L.marker([39.944248, -75.162749]).addTo(map)
-		    .bindPopup("<b>Morris Animal Refuge</b> ").openPopup();
-	        L.marker([40.0146844,-75.1295983]).addTo(map)
-	 	   .bindPopup("<b>Animal Care & Control Team</b> ").openPopup();
+		 L.marker([39.952172, -75.143401]).addTo(map)
+		 .bindPopup("<b>P.A.W.S</b><br>Address:100 N 2nd St,Philadelphia PA,19106<br>Phone(215)238-9901").openPopup();
+		 L.marker([39.944248, -75.162749]).addTo(map)
+		 .bindPopup("<b>Morris Animal Refuge</b><br>Address:1242 Lombard St,Philadelphia,PA 19147<br>Phone:(215)735-3256").openPopup();
+		 L.marker([40.0146844,-75.1295983]).addTo(map)
+		 .bindPopup("<b>Animal Care and Control Team</b><br>Address:111 W Hunting Park Ave,Philadelphia,PA 19140<br>Phone:(267)385-3800").openPopup();
 		 L.marker([40.0122723,-75.207893]).addTo(map)
-		    .bindPopup("<b>SPCA</b>").openPopup();
-	        L.marker([40.084925,-75.0379953]).addTo(map)
-		    .bindPopup("<b>PAWS Northeast</b>").openPopup();
-		L.marker([39.9671142,-75.1407965]).addTo(map)
-  		    .bindPopup("<b>Street Tails</b>").openPopup();
-		L.marker([39.964937,-75.1429401]).addTo(map)
-		      .bindPopup("<b>Saved Me</b> ").openPopup();
-		
-  		L.marker([40.0824553,-75.0284982]).addTo(map)
-		       .bindPopup("<b>Philadelphia Greyhound Connection</b>").openPopup();
-		
-  		L.marker([39.9286594,-75.1653143]).addTo(map)
-		     .bindPopup("<b>Doggie Style South Philly</b>").openPopup();
-		L.marker([39.9355916,-75.1848181]).addTo(map)
-		     .bindPopup("<b>Red Paw</b>").openPopup();  
-	        L.marker([39.9281211,-75.170693]).addTo(map)
-	       	     .bindPopup("<b>Philadelphia Community Cats Council</b>").openPopup();
-	
-		 
+		 bindPopup("<b>SPCA</b><br>Address:350 E Erie Ave,Philadelphia,PA 19134<br>Phone:(215)426-6300").openPopup();
+		 L.marker([40.084925,-75.0379953]).addTo(map)
+		 .bindPopup("<b>PAWS Northeast</b><br>Address:1810 Grant Ave, Philadelphia, PA 19115<br>Phone:(215)735-3256").openPopup();
+		 L.marker([39.9671142,-75.1407965]).addTo(map)
+		 .bindPopup("<b>Street Tails</b><br>Address:1030 N 2nd St #401,Philadelphia,PA 19123<br>Phone:(267)761-9434").openPopup();
+		 L.marker([39.964937,-75.1429401]).addTo(map)
+		 .bindPopup("<b>Saved Me</b><br>Address:860-862 N 3rd St,Philadelphia,PA 19123<br>Phone:(215)735-3256").openPopup();
+		 L.marker([40.0824553,-75.0284982]).addTo(map)
+		 .bindPopup("<b>Philadelphia Greyhound Connection</b><br>Address:2210 Murray St,Philadelphia,PA 19115<br>Phone:(215)676-7075").openPopup();
+		 L.marker([39.9286594,-75.1653143]).addTo(map)
+		 .bindPopup("<b>Doggie Style South Philly</b><br>Address:1700 E Passyunk Ave,Philadelphia,PA 19148<br>Phone:(215) 271-5200").openPopup();
+		 L.marker([39.9355916,-75.1848181]).addTo(map)
+		 .bindPopup("<b>Red Paw</b><br>Address:1328 S 24th St,Philadelphia,PA 19146<br>Phone:(267)289-2729").openPopup();
+		 L.marker([39.9281211,-75.170693]).addTo(map)
+		 .bindPopup("<b>Philadelphia Community Cats Council</b><br>Address: Everywhere Philadelphia<br>Phone:N/A").openPopup();
 	</script>
 </body>
 </html>
