@@ -20,8 +20,8 @@
     		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 		
-		hospital = L.marker([40.059417,-75.041380]).addTo(map)
-    		.bindPopup(hospitalPopup, size);
+		hospital = L.marker([40.059417,-75.041380])
+    		.bindPopup(hospitalPopup, size).addTo(map);
     		
     		city_home = L.marker([40.063771,-75.026373]).addTo(map)
     		.bindPopup('First House I lived in.<br> Located between I-95 and Roosevelt Boulevard.');
