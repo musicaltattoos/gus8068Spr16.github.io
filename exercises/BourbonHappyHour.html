@@ -19,11 +19,11 @@
 	
 <body>
 	<center>
-	<h1>Philadelphia Boubon Happy Hour Spots</h1>
+	<h1>Philadelphia Bourbon Happy Hour Spots</h1>
 	
 	<h2>My favorite spots in Philly where you can get a great drink for a great price!</h2>
 	
-	<div id='map' style="height:800px; width:1200px"></div>
+	<div id='map' style="height:600px; width:1200px"></div>
 	<script>
 		var map = L.map('map').setView([39.9422, -75.1517], 13);
 		
@@ -31,7 +31,7 @@
 		var Bar2Popup = '<img src="https://cdn2.vox-cdn.com/thumbor/vRPuu2ubYJiJWkvEozHLOj-pGh4=/0x6:243x143/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/38851944/statesidelogo.0.png" width="200" height="200" alt="Bar2"><br><b>Stateside</b><br>Monday through Friday 5pm – 7pm<br>$5 Old Fashioned'
 		var Bar3Popup = '<img src="https://pbs.twimg.com/profile_images/1383633189/fette.jpg" width="200" height="200" alt="Bar3"><br><b>Fette Sau></b><br>Monday through Friday 5pm – 7pm<br>$5 Old Fashioned<br>$5 Manhattan'
 		var Bar4Popup = '<img src="https://pbs.twimg.com/profile_images/672171074402910208/33o2o45m.jpg" width="200" height="200" alt="Bar4"><br><b>Lloyd Whiskey Bar</b><br>Monday 5pm – 8pm<br>$6 Old Fashioned<br>$7 Manhattan<br>$8 NY Sour'
-		var Bar5Popup = '<img src="http://www.finalvinylband.com/images/Twisted-Tail-logo.jpg" width="200" height="200" alt="Bar5"><br><b>Twisted Tail</b><br>Monday 5pm – 7pm<br>$7 Jim Beam Manhattan<br>Wednesday 5pm – 7pm<br>Bourbon $1 off/oz'
+		var Bar5Popup = '<img src="http://www.finalvinylband.com/images/Twisted-Tail-logo.jpg" width="200" height="200" alt="Bar5"><br><b>The Twisted Tail</b><br>Monday 5pm – 7pm<br>$7 Jim Beam Manhattan<br>Wednesday 5pm – 7pm<br>Bourbon $1 off/oz'
 		var Bar6Popup = '<img src="http://www.rittenhousesquarebars.com/images/bars/gooddog.jpeg" width="200" height="200" alt="Bar6"><br><b>Good Dog Bar</b><br>Monday through Friday 5pm – 7pm<br>Saturday 4pm – pm<br>Sunday  10pm –  Midnight<br>$1 Off All Drinks'
 		var Bar7Popup = '<img src="http://www.phoodie.info/wp-content/uploads/2012/06/vedgesign.jpeg" width="200" height="200" alt="Bar7"><br><b>Vedge</b><br>Monday through Friday 5pm – 7pm<br>$7 Salso Old Fashioned'
 			
@@ -39,26 +39,26 @@
   	  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
 	
-	Bar1 =L.marker([39.96, -75.14]).addTo(map)
-   	.bindPopup('Bourbon & Branch');
+	Bar1 = L.marker([39.9620, -75.1408])
+   	.bindPopup('Bar1Popup').addto(map);
    	
-	Bar2 =L.marker([39.93, -75.16]).addTo(map)
-   	.bindPopup('Stateside');
+	Bar2 = L.marker([39.9302, -75.1632])
+   	.bindPopup('Bar2Popup').addTo(map);
    	
-	Bar3 =L.marker([39.97, -75.13]).addTo(map)
-   	.bindPopup('Fette Sau');
+	Bar3 = L.marker([39.9691, -75.1346])
+   	.bindPopup('Bar3Popup').addTo(map);
    	
-	Bar4 =L.marker([39.97, -75.13]).addTo(map)
-   	.bindPopup('Lloyd Whiskey Bar');
+	Bar4 = L.marker([39.9714, -75.1277])
+   	.bindPopup('Bar4Popup').addTo(map);
    	
-	Bar5 =L.marker([39.94, -75.14]).addTo(map)
-   	.bindPopup('Twisted Tail');
+	Bar5 = L.marker([39.9418, -75.1451])
+   	.bindPopup('Bar5Popup').addTo(map);
    	
-	Bar6 =L.marker([39.95, -75.17]).addTo(map)
-   	.bindPopup('Good Dog Bar');
+	Bar6 = L.marker([39.9487, -75.1662])
+   	.bindPopup('Bar6Popup').addTo(map);
    	
-	Bar7 =L.marker([39.95, -75.16]).addTo(map)
-   	.bindPopup('Vedge');
+	Bar7 = L.marker([39.9479, -75.1613])
+   	.bindPopup('Bar7Popup').addTo(map);
 	
 		
 	</script>
