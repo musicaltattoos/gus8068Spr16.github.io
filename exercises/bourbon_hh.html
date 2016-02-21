@@ -1,14 +1,29 @@
 <html>
 <head>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </head>
-	<style>
-		body{background:grey; font-size:28px;}
-	</style>
+	
+<center>
+<Title>Philadelphia, PA</Title>
+	h1{ font-weight: bold; font-size: 50px; color:silver;
+	}
+	h2{ color:silver; font-size: 20px;
+</center>	
+
+<style>
+	body{ background-color:black;
+	}
+	</style>	
+
 <body>
-	Philadelphia Bourbon Happy Hour Spots
-	<div id='map' style="height:700px; width:700px"></div>
+	<center>
+		<h1>Philadelphia Bourbon Happy Hour Spots</h1>
+		
+		<h2>My favorite spots in Philly to go get a good drink at a cheap price!</h2>
+	</center>
+
+	<div id='map' style="height:800px; width:1200px"></div>
 	<script>
 		var map = L.map('map').setView([39.9524, -75.1714], 14);
 		
@@ -27,8 +42,8 @@
 		var VPopup = '<img src="http://www.phoodie.info/wp-content/uploads/2012/06/vedgesign.jpeg" width="200" height="200" alt="Bar7"><br><b>Vedge</b><br>Monday through Friday 5pm – 7pm<br>$7 Salso Old Fashioned'
 			
 	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-  	  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-	}).addTo(map);
+    		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
 	
 	Bar1 =L.marker([39.96, -75.14]).addTo(map)
    	.bindPopup('Bourbon & Branch');
