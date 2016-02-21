@@ -26,6 +26,7 @@
 	<div id='map' style="height:1000px; width:1000px"></div>
 	<script>
 		var map = L.map('map').setView([39.9524, -75.1714], 14);
+		
 		var BBPopup = '<img src="https://thesanfranciscobarexperiment.files.wordpress.com/2010/01/dsc00120.jpg" width="200" height="200" alt="Bar1"><br><b>Bourbon & Branch</b><br>Monday through Friday 5pm – 7pm / Tuesdays til 11pm<br>$5 Old Fashioned<br>$5 Whiskey Sours' 
 		var SSPopup = '<img src="https://cdn2.vox-cdn.com/thumbor/vRPuu2ubYJiJWkvEozHLOj-pGh4=/0x6:243x143/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/38851944/statesidelogo.0.png" width="200" height="200" alt="Bar2"><br><b>Stateside</b><br>Monday through Friday 5pm – 7pm<br>$5 Old Fashioned'
 		var FSPopup = '<img src="https://pbs.twimg.com/profile_images/1383633189/fette.jpg" width="200" height="200" alt="Bar3"><br><b>Fette Sau></b><br>Monday through Friday 5pm – 7pm<br>$5 Old Fashioned<br>$5 Manhattan'
