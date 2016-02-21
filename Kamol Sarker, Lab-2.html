@@ -6,11 +6,11 @@
 <body>
 
 	<style> 
-	body{ background-color:0066FF;
+	body{ background-color:"green";
 	};
 	</style>
 	
-	<h1><font color = "green">Important Place for me in Bangladesh</font></h1>
+	<h1><font color = "red">Important Place for me in Bangladesh</font></h1>
 	<div id='map' style="height:800px; width:1200px"></div>
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 	<script>
@@ -19,12 +19,20 @@
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 		
-		var Birth_place = L.marker([22.447105,89.390267]).addTo(map)
-		.bindPopup('<center><img src="http://www.photo.com.bd/main.php?g2_view=core.DownloadItem&g2_itemId=12889&g2_serialNumber=27" width="200" height="100" alt="BirthPlace"><br>Birth place_Bangladesh</br><br>Village called Hodda in southeastern of Bangladesh under the Koira Upozilla.</br>').openPopup();
+		var Birth_place = L.marker([22.447105,89.390267]).addTo(map).bindPopup('<center><img src="http://www.photo.com.bd/main.php?g2_view=core.DownloadItem&g2_itemId=12889&g2_serialNumber=27" width="300" height="200" alt="BirthPlace"><br>Birth place_Bangladesh</br><br>Village called Hodda in southeastern of Bangladesh under the Koira Upozilla.</br>').openPopup();
 	              
-	        var Sundarban = L.marker([22.212822,89.249809]).addTo(map)
-	        .bindPopup('<center><img src="http://www.grida.no/photolib/thumbs/0c67cdc9-0590-459e-a428-1a1a34e811c3/medium/mangrove-forest-lamu-kenya_d1d9.jpg" width="200" height="100" alt="Sundorban"><br>Biggest Mangrove froest</br><br>Situated at the southwestern part of Bangladesh.</br>').openPopup();  
-	          
+	        var Sundarban = L.marker([22.212822,89.249809]).addTo(map).bindPopup('<center><img src="http://www.grida.no/photolib/thumbs/0c67cdc9-0590-459e-a428-1a1a34e811c3/medium/mangrove-forest-lamu-kenya_d1d9.jpg" width="300" height="200" alt="Sundorban"><br>Biggest Mangrove froest</br><br>Situated at the southwestern part of Bangladesh.</br>').openPopup();  
+	        
+	        var Elementary_School = L.marker([22.810717,89.576421]).addTo(map).bindPopup('<center><img src="https://www.google.com/search?q=khulna+bangladesh&biw=1440&bih=815&tbm=isch&imgil=L6X_6jpYnwV0EM%253A%253BuQ2BH1Gr3B20pM%253Bhttp%25253A%25252F%25252Fwww.deshicookingrecipes.com%25252Fkhulna.htm&source=iu&pf=m&fir=L6X_6jpYnwV0EM%253A%252CuQ2BH1Gr3B20pM%252C_&usg=__yrQRPIUl6ILA0u2NskhyJleEwzg%3D&ved=0ahUKEwib0-Oh7dLKAhWClR4KHYahBSAQyjcIMg&ei=QV2tVtuuH4KreobDloAC#tbm=isch&q=Fatima+School%2C+khulna%2C+bangladesh&imgdii=xLQGCiuYP1TXcM%3A%3BxLQGCiuYP1TXcM%3A%3B79s2c84DrIK6KM%3A&imgrc=xLQGCiuYP1TXcM%3A" width="300" height="200" alt="Fatima"><br>Fatima High school</br><br>Where I have studied from play to 3rd grade.</br>').openPopup();
+	        
+	        var Secondary_School = L.marker([22.812752,89.574069]).addTo(map).bindPopup('<center><img src="https://www.google.com/search?q=khulna+zilla+school&biw=1440&bih=767&tbm=isch&imgil=aswLqBm_izzy5M%253A%253B00Vwm4J8htCmcM%253Bhttps%25253A%25252F%25252Fwww.youtube.com%25252Fwatch%25253Fv%2525253DUyp_OSr5qd4&source=iu&pf=m&fir=aswLqBm_izzy5M%253A%252C00Vwm4J8htCmcM%252C_&usg=__px3dDYCFZIukP1yf088TijTOCXY%3D&ved=0ahUKEwi54MDmj9PKAhXJmR4KHUICCQ4QyjcIMg&ei=eIGtVrnEG8mzesKEpHA#imgrc=nbpFdJfFxI2KhM%3A&usg=__px3dDYCFZIukP1yf088TijTOCXY%3D" width="300" height="200" alt="Zillaschool"><br>Khulna Zilla School</br><br>Where I have studied from 3rd gread to 10th gread.</br>').openPopup();
+	
+		var higher_secondary = L.marker([22.809471,89.562785]).addTo(map).bindPopup('<center><img src="https://www.facebook.com/226731204034107/photos/a.226739894033238.61121.226731204034107/226746720699222/?type=3&theater" width="300" height="200" alt="Fatima"><br>Govt M M City College</br><br>I have completed my high school diploma here.</br>').openPopup();
+	
+		var khulna_uni = L.marker([22.802662,89.534605]).addTo(map).bindPopup('<center><img src="https://www.facebook.com/9689350957/photos/pb.9689350957.-2207520000.1454213819./10153376471270958/?type=3&theater" width="300" height="200" alt="KhulnaUniversity"><br>Khulna University</br><br>First Federal University in Khulna Division that established on 1991.</br>').openPopup();
+	
+		var Dhaka_Airport = L.marker([23.846919,90.402613]).addTo(map).bindPopup('<center><img src="https://www.google.com/search?q=dhaka+international+airport&biw=1440&bih=767&tbm=isch&imgil=N3t2nRkKp5H-fM%253A%253BCw8Y5I3rYZb-lM%253Bhttp%25253A%25252F%25252Fbesttourplaces.info%25252Fshahjalal-international-airport-dhaka%25252F&source=iu&pf=m&fir=N3t2nRkKp5H-fM%253A%252CCw8Y5I3rYZb-lM%252C_&usg=__W5rXoGIRcWBVgT-oN2jCDE59CXk%3D&ved=0ahUKEwjCrNzcndPKAhVJlx4KHa6EAnwQyjcIQA&ei=EpCtVsLbAcmueq6JiuAH#imgrc=g4VfrqqMXGsrzM%3A&usg=__W5rXoGIRcWBVgT-oN2jCDE59CXk%3D" width="300" height="200" alt="Airport"><br>Hazarat Shahjalal International Airport</br><br>It was the only international airport till 2005.</br>').openPopup();
+	
 	</Script>
 </body>
 </html>
