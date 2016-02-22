@@ -1,0 +1,50 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+</head>
+<body>
+	Ecotourism in Philadelphia
+	<div id='map' style="height:800px; width:1200px"></div>
+	<script>
+		var map = L.map('map').setView([39.9814408,-75.1572587], 13);
+
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+		
+	    L.marker([39.96105, -75.605701]).addTo(map)
+    	.bindPopup('Hotel Warner.<br> A unique eco-friendly hotel.');
+    	L.marker([39.890111,-75.475477]).addTo(map)
+    	.bindPopup('Linvilla Orchards.<br> Personally picked produce.');
+    		
+    	L.marker([39.8712,-75.6747]).addTo(map)
+    	.bindPopup('Longwood Garden.<br> Acres of manicured gardens.');
+    		
+    	L.marker([39.9753,-75.2147]).addTo(map)
+    	.bindPopup('Japanese Tea House.<br> Traditional Japanese culture living with nature.');
+    		
+    	L.marker([39.98431,-75.2123]).addTo(map)
+    	.bindPopup('Horticulture Center.<br> Historic arboretum in Fairmount Park.');
+    		
+    	L.marker([40.05462,-75.2181]).addTo(map)
+    	.bindPopup('Valley Green.<br> A rustic, natural park.');
+		
+		L.marker([40.05462,-75.218]) .addTo(map)
+		.bindPopup('Valley Green Inn.<br> Good food in an unparalleled setting.');
+		
+		L.marker([39.98376,-75.2031]).addTo(map)
+        .bindPopup('Kelly Drive.<br> One of the regions most popular running and jogging paths.' );
+		
+		L.marker([39.988,-75.207]).addTo(map)
+        .bindPopup('Belmont Plateau.<br> The place where everybody goes, words of Will Smith.');
+		
+		L.marker([40.0208,-75.2128]).addTo(map)
+        .bindPopup('Fairmount Park.<br> Big historic park with walking trails, sports fields, gardens, public art & a reservoir.');
+	
+	
+    		
+    		
+	</script>
+</body>
+</html>
