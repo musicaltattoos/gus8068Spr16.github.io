@@ -7,7 +7,7 @@ Put your terms and definitions below. If you have never used markdown for format
 ⋅⋅*Thick client depends on  client power when the client deso most of the computational work to get information from the server.
 ⋅⋅*
 ##Server
-
+This is the computer that hosts the data and software.
 ##Tiered Architecture
 
 -*Presentation Tier*

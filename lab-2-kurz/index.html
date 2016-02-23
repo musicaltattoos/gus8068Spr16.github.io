@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<script src="js/main.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<style>
+	body {
+    margin: 0;
+    padding: 0;
+}
+	#title { 
+	font-family: 'Montserrat', sans-serif;
+	font-size: 48px;
+	margin: auto;
+}
+	#container {
+	float:left;
+	padding-left: 60px;
+}
+	#map {
+    height:600px;
+    width:625px;
+    margin auto:25%;
+	padding-top:60px;
+}
+	#images {
+    width:880px;
+	height: 625px;
+    float:right;
+    padding:20px;
+	overflow-y: auto;
+}
+	#text {
+    position: fixed;
+	bottom: 10px;
+    width: 100%;
+    height: 220px;
+	background-color:black;
+	color: white;
+	
+}
+	h1 {
+	font-family: 'Montserrat', sans-serif;
+	padding-left: 20px
+}
+
+	h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 18px;
+	padding-left: 20px
+}
+
+	p {
+	font-family: 'Raleway', sans-serif;
+	padding-right: 20px;
+	padding-left: 20px
+}
+	</style>
+</head>
+<body>
+	<h1 id='title'> Missing From View </h1>
+	<div id='container'> 
+	<div id='map'></div>
+	<script>
+		var map = L.map('map').setView([39.952451, -75.163459], 15);
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={token}', {
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		maxZoom: 18,
+		id: 'kirstenkurz.p5od0hk9',
+		token: 'pk.eyJ1Ijoia2lyc3Rlbmt1cnoiLCJhIjoiY2lnd2g4ZmdhMHM3d3c5bTUzaGVldzdsMyJ9.fsyf6xgVQAW23HPBuf8glQ'
+		}).addTo(map);
+	</script>
+	</div>
+	<div id='images'>
+		<img src="http://hiddencityphila.org/wp-content/uploads/2012/03/6914052635_db24f0e9dc_z.jpg" alt="Intro" style="width:860px;height:500px;" onclick="start()"/>
+		<img src="http://i.infopls.com/images/philadelphia-city-hall.jpg" alt="City Hall" style="width:284px;height:212px;" onclick="cityHall()"/>
+		<img src="http://www.catholicsun.org/wp-content/uploads/2013/12/20131227cnsbr3329-1024x695.jpg" alt="St. Bonaventure" style="width:284px;height:212px;" onclick="stBonaventure()"/>
+		<img src="https://afterthefinalcurtain.files.wordpress.com/2012/01/boyd_theatre_09.jpg" alt="The Boyd" style="width:284px;height:212px;" onclick="boydTheatre()"/>
+		<img src="http://philly.thedrinknation.com/images/bars/MacesCrossingPHL.jpg" alt="Mace's Crossing" style="width:284px;height:212px;" onclick="macesCrossing()"/>
+		<img src="http://static1.squarespace.com/static/53c55369e4b04c085e364a74/t/542c15b2e4b0c36d606a40f8/1412175295557/" alt="St. Laurentius" style="width:284px;height:212px;" onclick="stLaurentius()"/>
+		<img src="http://planphilly.com/uploads/media_items/first-african-baptist-1.0.414.3888.1859.752.360.c.jpg" alt="First African Baptist Church" style="width:284px;height:212px;" onclick="firstAfrican()"/>
+		<img src="http://www.visitphilly.com/resize/images/franklin-ghost-house-600-587x391.jpg" alt="Benjamin Franklin's Home" style="width:284px;height:212px;" onclick="benjaminFranklin()"/>
+		<img src="http://frankfurness.org/wp-content/uploads/2012/09/069_Comm_Bank_369_Provident3.jpg" alt="Provident Life and Trust Company" style="width:284px;height:212px;" onclick="providentLife()"/>
+		<img src="http://1.bp.blogspot.com/-Pfnz5BIbZlc/VcqRmXnA14I/AAAAAAAAJAI/NBIHOwwcXto/s1600/divine-lorraine-jeff-fusco-940.jpg" alt="Divine Lorraine" style="width:284px;height:212px;" onclick="divineLorraine()"/>
+		<img src="http://www.ronsaari.com/stockImages/philadelphia/DeclarationHouse.jpg" alt="Graff House" style="width:284px;height:212px;" onclick="graffHouse()"/>
+	</div>
+	<div id="text">
+		<h1 id=header>What of Philadelphia's Built Environment Should Be Preserved?</h1>
+		<h2></h2><p>Philadelphia is the U.S.' only UNESCO World Heritage City and boasts a wealth of historical structures that define a sense of place for residents and visitors. 
+		Yet, each year, more examples of the city's architectural and cultural heritage fall victim to passive neglect or caustic development, eventually meeting the wrecking ball. 
+		An offical historical designation by the city's Historical Commission can save a building from demolition unless structural failure is proven imminent and repairs prohibitively high.
+		The cost of maintaining said structures can cause financial hardship for owners, who do not have to be included in the designation process and bear the onus of proving what 'prohibitively high' maintenance means
+		-- a good or bad thing depending on the context or who is telling the story. </p>
+		<p>A city is not an edificial museum, but instead a collection of entities in flux, subject to the ever-changing needs of its constituent actors, who may yield their influence through power, wealth, or collective action.
+		Click through the images for a look at some of the buildings that exemplify the tension between perservation and change. <i>(Top Photo: Demolition preceeding the 2007 Convention 
+		Center expansion, 13th &amp; Arch, Courtesy of Hidden City)</i> </p>
+	</div>
+</body>
+</html>
