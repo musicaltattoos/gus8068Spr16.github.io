@@ -7,3 +7,8 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 L.marker([-43.5269991, 172.6201908]).addTo(map)
     .bindPopup('Christchurch.<br> Hagley Park.')
     .openPopup();
+    
+var popup = L.popup()
+    .setLatLng([51.5, -0.09])
+    .setContent("I am a standalone popup.")
+    .openOn(map);
