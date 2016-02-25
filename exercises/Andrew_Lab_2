@@ -1,14 +1,24 @@
-var map = L.map('map').setView([-43.5269991, 172.6201908], 13);
-
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-L.marker([-43.5269991, 172.6201908]).addTo(map)
-    .bindPopup('Christchurch.<br> Hagley Park.')
-    .openPopup();
-    
-var popup = L.popup()
-    .setLatLng([51.5, -0.09])
-    .setContent("I am a standalone popup.")
-    .openOn(map);
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+</head>
+<body>
+	South Island of New Zealand
+	<div id='map' style="height:800px; width:1200px"></div>
+	<script>
+		var map = L.map('map').setView([-44.7733079,169.2890086], 13);
+		
+		
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+		
+		Hagley Park = L.marker([-43.5270897,172.6200638])
+    		.bindPopup(HagleyParkPopup).addTo(map);
+    		
+    		
+    		
+	</script>
+</body>
+</html>
