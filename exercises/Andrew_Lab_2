@@ -5,5 +5,5 @@ L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 L.marker([-43.5269991, 172.6201908]).addTo(map)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .bindPopup('Christchurch.<br> Hagley Park.')
     .openPopup();
