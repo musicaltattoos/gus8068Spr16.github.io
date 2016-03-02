@@ -1,1 +1,27 @@
-
+<html>
+<head>
+<script type="text/javascript" src="http://maps.yahooapis.com/v3.5/fl/javascript/apiloader.js?appid=YD-2q47d5I_I3g5YVbU9BysXg--">
+</script>
+<style type="text/css">
+#mapContainer {
+  height: 600px;
+  width: 600px;
+}
+</style>
+  </head>
+  <body>
+    <div id="mapContainer"></div>
+    
+    <script type="text/javascript">
+    var latlon = new LatLon(30.244047, -97.747175);
+    var map = new Map("mapContainer", "YD-2q47d5I_I3g5YVbU9BysXg--", latlon, 3);
+    map.addTool( new PanTool(), true );
+    
+  
+  
+  
+  
+  </script>
+  </body>
+  </html>
+  
