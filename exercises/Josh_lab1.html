@@ -14,7 +14,7 @@
   		"type": "Feature",
   		"properties": {
     			"name": "Nazareth Hospital",
-			 "amenity": "Hospital",
+			"amenity": "Hospital",
     			"popupContent": "<br>Nazareth Hostpital.<br>Where I was born."
   		},
   		"geometry": {
@@ -38,7 +38,7 @@
 		/*hospital = L.marker([40.059417,-75.041380])
     		.bindPopup(hospitalPopup).addTo(map);*/
     		
-    		hjson = L.geoJson(hospitaljson).bindPopup(hospitalPopup).addTo(map);
+    		hjson = L.geoJson(hospitaljson).addTo(map);
     		
     		city_home = L.marker([40.063771,-75.026373])
     		.bindPopup(cityPopup).addTo(map);
