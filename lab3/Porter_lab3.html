@@ -42,9 +42,7 @@ var geojsonFeature = {
     }
 };
 
-L.geoJson(geojsonFeature, {
-	//onEachFeature:layer.bindPopup 
-	}).addTo(map);
+L.geoJson(geojsonFeature, {onEachFeature: bindPopup}).addTo(map);
 	</script>
 </body>
 </html>
