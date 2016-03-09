@@ -12,10 +12,18 @@
 	<script>
 	
 	
-       	var MtbMap = L.tileLayer('http://tile.mtbmap.cz/mtbmap_tiles/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &amp; USGS'});
+       	var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+});
+
+var map = L.map('map', {
+  scrollWheelZoom: false,
+  center: [39.9588, -75.1676],
+  zoom: 6
+});
+
+map.addLayer(layer);
 	
-	var map = L.map('map').setView([39.9588, -75.1676], 11);
 	
 	</script>
 </body>
