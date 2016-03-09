@@ -25,18 +25,10 @@ var basemap = L.tileLayer(url, {
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
 });
 basemap.addTo(map);
-	</script>
-	<script> 
-	var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-        "name": "Alexander Wilson Elementary School,
-        "popupContent": "Elementary School"},
-    "geometry": {
-    	"type": "Point",
-        "coordinates": [39.94408, -75.208878]}};
+	
+	L.marker([39.94408, -75.208878]).addTo(map)
+   	.bindPopup('Alexander Wilson Elementary School');	
 
-geojsonFeature.addTo(map);
 	</script>
 </body>
 </html>
