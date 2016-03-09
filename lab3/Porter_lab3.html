@@ -42,7 +42,9 @@ var geojsonFeature = {
     }
 };
 
-L.geoJson(geojsonFeature).addTo(map);
+L.geoJson(geojsonFeature, {
+	//onEachFeature: ;
+	}).addTo(map);
 	</script>
 </body>
 </html>
