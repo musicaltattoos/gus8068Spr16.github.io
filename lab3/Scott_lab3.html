@@ -12,11 +12,13 @@ Schools in Philadelphia
 var Thunderforest_Outdoors = L.map('map').setView([39.9814367,-75.157264], 12);
 L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
+}).addTo(map)
 
-  
-  
-  
+L.marker([39.9603237, -75.1957877]).addTo(map)
+       .bindPopup('<b>Samuel Powel School</b><br> Black - 74.4 percent<br>White - 9.2 percent<br>Asian - 4.1 percent<br>Other - 11.6 percent<br><font color = "green"><b>SPP Score - 85.8</b></font>');
+
+
+
   
   </script>
   </body>
