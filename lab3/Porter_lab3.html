@@ -13,9 +13,9 @@
 	
 	var map = L.map('map').setView([39.9588, -75.1676], 11);
 		
-	var tonerUrl = "http://{S}tile.stamen.com/watercolor/{Z}/{X}/{Y}.png";
+	var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
 
-var url = watercolorUrl.replace(/({[A-Z]})/g, function(s) {
+var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
     return s.toLowerCase();
 });
 
