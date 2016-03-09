@@ -1,0 +1,21 @@
+<html>
+<head>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+</head>
+	<style>
+		body{background:silver; font-size:28px;}
+	</style>
+<body>
+	Map of Philadelphia Schools Closed by SRC in 2013
+	<div id='map' style="height:700px; width:700px"></div>
+	<script>
+		var map = L.map('map').setView([39.9588, -75.1676], 11);
+		
+		
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  	  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+
+</body>
+</html>
