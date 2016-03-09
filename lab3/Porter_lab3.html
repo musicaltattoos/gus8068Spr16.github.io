@@ -12,10 +12,8 @@
 	<script>
 	
 	
-	var Thunderforest_TransportDark = L.tileLayer('http://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>', contributors'
-	}).addTo(map); 
-	maxZoom: 19
+        L.tileLayer('http://{s}.tile.thunderforest.com/transport-dark/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a> contributors'}).addTo(map);
 	
 	var map = L.map('map').setView([39.9588, -75.1676], 11);
 	
