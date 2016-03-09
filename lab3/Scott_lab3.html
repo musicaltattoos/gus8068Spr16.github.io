@@ -4,12 +4,13 @@
          <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </head>
 <body>
-<center>
-
- <div id = 'map' style="height: 600px;width: 600px;"></div></center>
+Schools in Philadelphia
+ <div id = 'map' style="height: 600px;width: 600px;"></div>
 
 <script>
-var OpenMapSurfer_Roads = L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
+
+var OpenMapSurfer_Roads = L.map('map').setView([39.9814367,-75.157264], 12);
+L.tileLayer('http://korona.geog.uni-heidelberg.de/tiles/roads/x={x}&y={y}&z={z}', {
 	maxZoom: 20,
 	attribution: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @ University of Heidelberg</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 });
