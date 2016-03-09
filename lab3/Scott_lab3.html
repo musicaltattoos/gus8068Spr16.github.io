@@ -8,13 +8,21 @@ Schools in Philadelphia
  <div id = 'map' style="height: 600px;width: 600px;"></div>
 
 <script>
-
-var Thunderforest_Outdoors = L.map('map').setView([39.9814367,-75.157264], 12);
-L.tileLayer('http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+var map = L.map('map', {
+  scrollWheelZoom: false,
+  center: [40.7127837, -74.0059413],
+  zoom: 6
 });
 
+L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+});
+
+
+
 map.addLayer(layer);
+
+
 
   
   </script>
