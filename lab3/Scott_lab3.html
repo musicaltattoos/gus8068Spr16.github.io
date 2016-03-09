@@ -1,26 +1,23 @@
 <html>
 <head>
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-         <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </head>
 <body>
 Schools in Philadelphia
  <div id = 'map' style="height: 600px;width: 600px;"></div>
 
 <script>
-var map = L.map('map', {
-  scrollWheelZoom: false,
-  center: [40.7127837, -74.0059413],
-  zoom: 6
+
+var layer = new L.StamenTileLayer("toner");
+var map = new L.Map("element_id", {
+    center: new L.LatLng(37.7, -122.4),
+    zoom: 12
 });
-
-L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
-});
-
-
-
 map.addLayer(layer);
+
+
+
 
 
 
