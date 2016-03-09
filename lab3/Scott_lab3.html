@@ -9,12 +9,10 @@ Schools in Philadelphia
 
 <script>
 
-var OpenMapSurfer_Roads = L.map('map').setView([39.9814367,-75.157264], 12);
- L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
-	maxZoom: 16
-}).addTo(map)
-    
+var Thunderforest_Landscape = L.map('map').setView([39.9814367,-75.157264], 12);
+ L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
   
   
   
