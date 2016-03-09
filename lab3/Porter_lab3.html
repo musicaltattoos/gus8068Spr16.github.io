@@ -32,17 +32,13 @@ basemap.addTo(map);
 var geojsonFeature = {
     "type": "Feature",
     "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
-    },
+        "name": "Alexander Wilson Elementary School,
+        "popupContent": "Elementary School"},
     "geometry": {
-        "type": "Point",
-        "coordinates": [39.9588, -75.1676]
-    }
-};
+    	"type": "Point",
+        "coordinates": [39.94408, -75.208878]}};
 
-L.geoJson(geojsonFeature, {onEachFeature: bindPopup}).addTo(map);
+geojsonFeature.addTo(map);
 	</script>
 </body>
 </html>
