@@ -3,9 +3,7 @@
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </head>
-	<style>
-		body{background:silver; font-size:28px;}
-	</style>
+	<style>body{background:silver; font-size:28px;}</style>
 <body>
 	Map of Philadelphia Schools Closed by SRC in 2013
 	<div id='map' style="height:700px; width:700px"></div>
@@ -19,9 +17,6 @@
 	
 	L.geoJson(geojsonFeature).addTo(map);
 	
-
-
-
 	var geojsonFeature = {
     	"type": "Point",
     	"properties": {
