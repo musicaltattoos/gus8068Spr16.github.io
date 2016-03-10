@@ -25,21 +25,24 @@
   
 </style>
 
-        <body>
-  <center>
-  <h1> Schools within Pennsbury School District </h1>
+    <body>
+        <center>
+        <h1> Schools within Pennsbury School District </h1>
   
-  <h2> Within this school district there are 11 elementary schools,
-  3 middle schools, and 3 high schools.<br>
-  The district serves more than 73,000, covering
-  an area of 49 square miles.</h2>
+        <h2> Within this school district there are 11 elementary schools,
+        3 middle schools, and 3 high schools.<br>
+        The district serves more than 73,000, covering
+        an area of 49 square miles.</h2>
   
     
-      <h3><b><a href="http://www.pennsbury.k12.pa.us/pennsbury/" 
-      target="blank"> Pennsbury School District </a></b></h3>
+        <h3><b><a href="http://www.pennsbury.k12.pa.us/pennsbury/" 
+        target="blank"> Pennsbury School District </a></b></h3>
   
-  <div id='map' style="height:600px; width:900px"></div>
-  </center>
+        <div id='map' style="height:600px; width:900px"></div>
+        
+        
+        </center>
+    </body>
       
       
       
