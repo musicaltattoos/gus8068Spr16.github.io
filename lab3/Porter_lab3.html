@@ -10,28 +10,60 @@
 	Map of Philadelphia Schools Closed by SRC in 2013
 	<div id='map' style="height:700px; width:700px"></div>
 	<script>
-	
-	var map = L.map('map').setView([39.9588, -75.1676], 11);
+		var map = L.map('map').setView([39.9588, -75.1676], 11);
 		
-	var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
-var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
-    return s.toLowerCase();
-});
-var basemap = L.tileLayer(url, {
-    subdomains: ['','a.','b.','c.','d.'],
-    minZoom: 0,
-    maxZoom: 17,
-    type: 'png',
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-});
-basemap.addTo(map);
-
-var geojsonFeatureCollection = L.geoJson( "type": "FeatureCollection",
-    "features": [
-      { "type": "Point",
-        "coordinates": [39.94408, -75.208878]}};
-        geojsonFeatureCollection.addTo(map);
-        
-      	</script>
+		
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+  	  attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+	L.marker([39.94408, -75.208878]).addTo(map)
+   	.bindPopup('Alexander Wilson Elementary School');
+	
+	L.marker([39.989227, -75.169495]).addTo(map)
+   	.bindPopup('Anna B. Pratt Elementary School');
+	L.marker([39.941732, -75.226536]).addTo(map)
+   	.bindPopup('Anna H. Shaw Middle School');
+	L.marker([39.979575, -75.110488]).addTo(map)
+   	.bindPopup('Charles Carroll High School');
+	L.marker([39.898484, -75.245735]).addTo(map)
+   	.bindPopup('Communications Technology School');
+	L.marker([39.925162, -75.160021]).addTo(map)
+   	.bindPopup('Edward Bok Technical High School');
+	L.marker([39.994334, -75.142141]).addTo(map)
+   	.bindPopup('Fairhill Elementary School');
+	L.marker([39.977628, -75.173975]).addTo(map)
+   	.bindPopup('General John F. Reynolds Elementary School');
+	L.marker([39.897079, -75.248837]).addTo(map)
+   	.bindPopup('George Pepper Middle School');
+	L.marker([40.106683, -75.026139]).addTo(map)
+   	.bindPopup('George Washington Elementary School');
+	L.marker([40.040398, -75.176011]).addTo(map)
+   	.bindPopup('Germantown High School');
+	L.marker([40.002525, -75.174011]).addTo(map)
+   	.bindPopup('John G. Whittier Elementary School');
+	L.marker([40.053793, -75.152493]).addTo(map)
+   	.bindPopup('John L. Kinsey Elementary School');
+	L.marker([39.982545, -75.14634]).addTo(map)
+   	.bindPopup('Joseph C. Ferguson Elementary School');
+	L.marker([39.975101, -75.212528]).addTo(map)
+   	.bindPopup('Joseph Leidy Elementary School');
+	L.marker([39.990397, -75.184583]).addTo(map)
+   	.bindPopup('Leslie P. Hill Elementary School');
+	L.marker([39.97571, -75.265551]).addTo(map)
+   	.bindPopup('Robert E. Lamberton High School');
+	L.marker([40.03953, -75.175219]).addTo(map)
+   	.bindPopup('Robert Fulton Elementary School');
+	L.marker([39.975992, -75.174122]).addTo(map)
+   	.bindPopup('Roberts Vaux Promise Academy');
+	L.marker([39.999704, -75.098721]).addTo(map)
+   	.bindPopup('Sheridan West Academy');
+	L.marker([39.97636, -75.11694]).addTo(map)
+   	.bindPopup('Stephen A. Douglas High School');
+	
+	L.marker([39.947687, -75.236769]).addTo(map)
+   	.bindPopup('University City High School');
+	L.marker([39.934912, -75.175911]).addTo(map)
+   	.bindPopup('Walter G. Smith Elementary School');
+	</script>
 </body>
 </html>
