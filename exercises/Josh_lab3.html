@@ -33,7 +33,7 @@
 		    	accessToken: 'pk.eyJ1IjoiZnBvbGlnMDEiLCJhIjoiOTE1YTk1YmVkYjZmODZlNDFiMzQ3ZDJlMmI3MjhhMTUifQ.3Xg0-PXs619FBb2LesZBFg'
 		}).addTo(map);
 		
-		L.geoJson([hospitaljson, cityjson, suburbjson, last_suburbjson, highschooljson, stadiumjson], {style: style, pointToLayer: pointToLayer, onEachFeature: onEachFeature}).addTo(map);
+		L.geoJson([hospitaljson, cityjson, suburbjson, last_suburbjson, highschooljson, stadiumjson], {onEachFeature: onEachFeature}).addTo(map);
 		
 		/*
 		var hospitalPopup = '<img src="http://www.uhsurology.com/images/sce/LOCATIONS/nazarethX.jpg" width="200" height="200" alt="Origin"><br>Nazareth Hostpital.<br>Where I was born.' 
