@@ -26,29 +26,22 @@ var Esri_WorldStreetMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/res
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 }).addTo(map)
 
-var myGeoJSON = {
-	"type" : "FeatureCollection",
-	"features" : [
-		{'type':'Feature', 
-		"properties":{
-		"name":"<b>Samuel Powel School</b> <br> Black - 74.4 percent<br>White - 9.2 percent<br>Asian - 4.1 percent<br>Other - 11.6 percent<br><font color = "green"><b>SPP Score - 85.8</b></font>",
-		"geometry":{'type':'Point','coordinates':[39.9603237, -75.1957877]]}},
-
-			{"type":"Feature",
- 				"properties":{
-				"name":"<b>Penn-Alexander School</b> <br>Black - 22.8 percent<br>White - 39.7 percent<br>Asian - 18.1 percent<br> Other - 11.8 percent<br><font color = "green"><b>SPP Score - 85.7</b></font>")
-				"geometry":{'type':'Point','coordinates':[-75.1474439, 39.9716709]}}
-
-	]};
-
-	
-	
-	
-	
-	
-	
-	]
-
+var myGeoJSON =  "type": "FeatureCollection",
+  "features": [
+   
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2,
+        "Name": "<b>Bourbon & Branch</b><br>Monday through Friday 5pm – 7pm / Tuesdays til 11pm<br>$5 Old Fashioned<br>$5 Whiskey Sours",
+        "url": "<img src='https://thesanfranciscobarexperiment.files.wordpress.com/2010/01/dsc00120.jpg' width=200 height=200 />"
+      ]};
+function onEachFeature(feature, layer) {
+       popupOptions = {maxWidth: 150};
+        if (feature.properties && feature.properties.Name) {
+        layer.bindPopup(feature.properties.url + "<br>" + feature.properties.Name, popupOptions);
+    }
+	}
   
   </script>
   </body>
