@@ -82,7 +82,8 @@
         
         function onEachFeature(feature, layer) {
         layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
-}
+        }
+        var geojsonlayer = L.geoJson(geo, {onEachFeature: onEachFeature}).addTo(map);
 
         
     
