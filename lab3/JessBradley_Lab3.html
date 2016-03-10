@@ -2,15 +2,11 @@
 <html>
 	<head>
 		<title> Philly Bourbon HH </title>
-		<meta charset="utf-8" />
 		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.7/leaflet.css" />
 		<link rel="stylesheet" type="text/css" href="css/own_style.css">
 		<script src="http://cdn.leafletjs.com/leaflet-0.7.7/leaflet.js"></script>
 		<script src="js/leaflet-hash.js"></script>
-	<style>
-	.leaflet-popup-content-wrapper {
-    background: #0CAE38;}
-	</style>
+	
 	</head>
 	<style>
 		body{background:silver; font-size:28px;}
@@ -20,7 +16,10 @@
 		<div id='map' style="height:1000px; width:600px"></div>
 		<script>
 		var map = L.map('map').setView([39.9588, -75.1676], 11);
-		
+	<style>
+	.leaflet-popup-content-wrapper {
+    background: #light gray;}
+	</style>	
 	var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
 var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
     return s.toLowerCase();
@@ -143,18 +142,7 @@ function onEachFeature(feature, layer) {
 		
 		
 		
-		
-		feature_group.addTo(map);
-		var title = new L.Control();
-		title.onAdd = function (map) {
-			this._div = L.DomUtil.create('div', 'info');
-			this.update();
-			return this._div;
-		};
-		title.update = function () {
-			this._div.innerHTML = '<h2>Philly Bourbon HH Spots</h2>Lab 3'
-		};
-		title.addTo(map);
+
 	
 	
 	
