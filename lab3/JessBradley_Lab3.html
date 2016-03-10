@@ -2,45 +2,28 @@
 <html>
 	<head>
 		<title> Philly Bourbon HH </title>
-		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.7/leaflet.css" />
-		<link rel="stylesheet" type="text/css" href="css/own_style.css">
-		<script src="http://cdn.leafletjs.com/leaflet-0.7.7/leaflet.js"></script>
-		<script src="js/leaflet-hash.js"></script>
-	
+		 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+		<style>
+	.leaflet-popup-content-wrapper {
+    background: #light gray;}
+	</style>
 	</head>
 	<style>
 		body{background:silver; font-size:28px;}
 	</style>
 	<body>
 		<center>Bourbon Happy Hour Spots in Philly</center>
-		<div id='map' style="height:1000px; width:1200px"></div>
-		<script>
-		var map = L.map('map').setView([39.9588, -75.1676], 11);
-	<style>
-	.leaflet-popup-content-wrapper {
-    background: #light gray;}
-	</style>	
-	var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
+		<div style="display:flex;justify-content:center;align-items:center;">
+		<div id='map' style="height:1000px; width:600px"></div>
+
+<script>
+var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
 var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
-    return s.toLowerCase();
+return s.toLowerCase();
 });
-var basemap = L.tileLayer(url, {
-    subdomains: ['','a.','b.','c.','d.'],
-    minZoom: 0,
-    maxZoom: 17,
-    type: 'png',
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-})
-basemap.addTo(map);
-		
-function onEachFeature(feature, layer) {
-       popupOptions = {maxWidth: 150};
-        if (feature.properties && feature.properties.Name) {
-        layer.bindPopup(feature.properties.url + "<br>" + feature.properties.Name, popupOptions);
-    }
-	}	
-	
-	var myGeoJSON = [
+var myGeoJSON = [
   {
  "type": "FeatureCollection",
   "features": [
@@ -50,7 +33,7 @@ function onEachFeature(feature, layer) {
       "properties": {
         "OBJECTID": 2,
         "Name": "<b>Bourbon & Branch</b><br>Monday through Friday 5pm – 7pm / Tuesdays til 11pm<br>$5 Old Fashioned<br>$5 Whiskey Sours",
-        "url": "<img src="https://thesanfranciscobarexperiment.files.wordpress.com/2010/01/dsc00120.jpg" width="200" height="200" />"
+        "url": "<img src='https://thesanfranciscobarexperiment.files.wordpress.com/2010/01/dsc00120.jpg' width=200 height=200 />"
       },
       "geometry": {
         "type": "Point",
@@ -65,7 +48,7 @@ function onEachFeature(feature, layer) {
       "properties": {
         "OBJECTID": 3,
         "Name": "<b>Stateside</b><br>Monday through Friday 5pm – 7pm<br>$5 Old Fashioned",
-        "url": "<img src="https://cdn2.vox-cdn.com/thumbor/vRPuu2ubYJiJWkvEozHLOj-pGh4=/0x6:243x143/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/38851944/statesidelogo.0.png' height=200 width=200 />"
+        "url": "<img src='https://cdn2.vox-cdn.com/thumbor/vRPuu2ubYJiJWkvEozHLOj-pGh4=/0x6:243x143/1600x900/cdn0.vox-cdn.com/uploads/chorus_image/image/38851944/statesidelogo.0.png' height=200 width=200 />"
       },
       "geometry": {
         "type": "Point",
@@ -80,7 +63,7 @@ function onEachFeature(feature, layer) {
       "properties": {
         "OBJECTID": 4,
         "Name": "<b>Fette Sau</b><br>Monday through Friday 5pm – 7pm<br>$5 Old Fashioned<br>$5 Manhattan",
-        "url":  "<img src="https://pbs.twimg.com/profile_images/1383633189/fette.jpg' height=200 width=200/>"
+        "url":  "<img src='https://pbs.twimg.com/profile_images/1383633189/fette.jpg' height=200 width=200/>"
       },
       "geometry": {
         "type": "Point",
@@ -95,7 +78,7 @@ function onEachFeature(feature, layer) {
       "properties": {
         "OBJECTID": 5,
         "Name": "<b>Lloyd's Whiskey Bar</b><br>Monday 5pm – 8pm<br>$6 Old Fashioned<br>$7 Manhattan<br>$8 NY Sour",
-        "url":  "<img src="https://pbs.twimg.com/profile_images/672171074402910208/33o2o45m.jpg' height=200 width=200 />"
+        "url":  "<img src='https://pbs.twimg.com/profile_images/672171074402910208/33o2o45m.jpg' height=200 width=200 />"
       },
       "geometry": {
         "type": "Point",
@@ -110,7 +93,7 @@ function onEachFeature(feature, layer) {
       "properties": {
         "OBJECTID": 6,
         "Name": "<b>Twisted Tail</b><br>Monday 5pm – 7pm<br>$7 Jim Beam Manhattan<br>Wednesday 5pm – 7pm<br>Bourbon $1 off/oz",
-        "url":  "<img src="http://www.finalvinylband.com/images/Twisted-Tail-logo.jpg' height=200 width=200 />"
+        "url":  "<img src='http://www.finalvinylband.com/images/Twisted-Tail-logo.jpg' height=200 width=200 />"
       },
       "geometry": {
         "type": "Point",
@@ -125,7 +108,7 @@ function onEachFeature(feature, layer) {
       "properties": {
         "OBJECTID": 7,
         "Name": "<b>Vedge</b><br>Monday through Friday 5pm – 7pm<br>$7 Salso Old Fashioned",
-        "url": "<img src="http://www.phoodie.info/wp-content/uploads/2012/06/vedgesign.jpeg' height=200 width=200 />"
+        "url": "<img src='http://www.phoodie.info/wp-content/uploads/2012/06/vedgesign.jpeg' height=200 width=200 />"
       },
       "geometry": {
         "type": "Point",
@@ -139,20 +122,26 @@ function onEachFeature(feature, layer) {
 }
   ];
   
-		
-		
-		
-
-	
-	
-	
-	var baseMaps = {
-		'Stamen Toner': basemap_0	};
-		L.control.scale({options: {position: 'bottomleft',maxWidth: 100,metric: true,imperial: false,updateWhenIdle: false}}).addTo(map);
-	L.geoJson(geoJsonAL, {
-				 onEachFeature: onEachFeature
-			}).addTo(map);
-	
+  function onEachFeature(feature, layer) {
+       popupOptions = {maxWidth: 150};
+        if (feature.properties && feature.properties.Name) {
+        layer.bindPopup(feature.properties.url + "<br>" + feature.properties.Name, popupOptions);
+    }
+	}
+var basemap = L.tileLayer(url, {
+    subdomains: ['','a.','b.','c.','d.'],
+    minZoom: 0,
+    maxZoom: 17,
+    type: 'png',  
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>,  under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
+});
+var map = L.map('map')
+	.addLayer(basemap)
+	.setView([39.9588, -75.1676], 12)
+	L.geoJson(myGeoJSON, {
+	 onEachFeature: onEachFeature
+	}).addTo(map);
+  
 	</script>
 </body>
 </html>
