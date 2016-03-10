@@ -15,9 +15,9 @@
 <style>
   body{ background-color:black;
   }
-  p2{ font-weight: bold; font-size: 50px; color:orange;
+  h1{ font-weight: bold; font-size: 50px; color:orange;
   }
-  p3{ color:orange; font-size: 20px;
+  h2{ color:orange; font-size: 20px;
   }
   p1{ color:orange; font-size: 12px;
   }
@@ -30,15 +30,15 @@
 
     <body>
         <center>
-        <p2> Schools within Pennsbury School District </p2>
+        <h1> Schools within Pennsbury School District </h1>
   
-        <p3> Within this school district there are 11 elementary schools,
+        <h2> Within this school district there are 11 elementary schools,
         3 middle schools, and 3 high schools.<br>
         The district serves more than 73,000, covering
-        an area of 49 square miles.</p3>
+        an area of 49 square miles.</h2>
   
-        <p4><b><a href="http://www.pennsbury.k12.pa.us/pennsbury/" 
-        target="blank"> Pennsbury School District </a></b></p4>
+        <h3><b><a href="http://www.pennsbury.k12.pa.us/pennsbury/" 
+        target="blank"> Pennsbury School District </a></b></h3>
   
         <div id='map' style="height:600px; width:900px"></div>
         
