@@ -40,7 +40,7 @@
   			}
 		};
 		
-		L.geoJson(hospitaljson, {onEachFeature: onEachFeature}).addTo(map);
+		L.geoJson(hospitaljson, {onEachFeature: onEachFeature}).bindPopup(hospitalPopup).addTo(map);
 		
 		/*
 		var hospitalPopup = '<img src="http://www.uhsurology.com/images/sce/LOCATIONS/nazarethX.jpg" width="200" height="200" alt="Origin"><br>Nazareth Hostpital.<br>Where I was born.' 
