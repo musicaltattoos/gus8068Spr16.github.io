@@ -1,15 +1,16 @@
-<html>
-    <head>
-      <center>
-        <title> Pennsbury School District </title>
-        <p1> produced by Jeffrey Karmazin </p1>
+<!DOCTYPE html>
+    <html>
+        <head>
+        <center>
+            <title> Pennsbury School District </title>
+            <p1> produced by Jeffrey Karmazin </p1>
         
-        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-        <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+            <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
         </center>
-      </head>
+        </head>
       
-      <style>
+<style>
   body{ background-color:black;
   }
   h1{ font-weight: bold; font-size: 50px; color:orange;
@@ -34,15 +35,16 @@
         The district serves more than 73,000, covering
         an area of 49 square miles.</h2>
   
-    
         <h3><b><a href="http://www.pennsbury.k12.pa.us/pennsbury/" 
         target="blank"> Pennsbury School District </a></b></h3>
   
         <div id='map' style="height:600px; width:900px"></div>
         
-        
         </center>
-    </body>
+        
+    <script>
+        
+    
       
       
       
