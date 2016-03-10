@@ -1,34 +1,33 @@
-<!DOCTYPE html>
-    <html>
-        <head>
-            <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-            <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-            
-        </head>
-        <center>
-            <title> Pennsbury School District </title>
-            <p1> produced by Jeffrey Karmazin </p1>
-        </center>
-        
-      
-<style>
-  body{ background-color:black;
+<html>
+    <head>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+
+    </head>
+
+    <center>
+        <title> Pennsbury School District</title>
+        <p1> produced by Jeffrey Karmazin</p1>
+    </center>
+
+    <style>
+    body{ background-color:black;
   }
-  h1{ font-weight: bold; font-size: 50px; color:orange;
+    h1{ font-weight: bold; font-size: 50px; color:orange;
   }
-  h2{ color:orange; font-size: 20px;
+    h2{ color:orange; font-size: 20px;
   }
-  p1{ color:orange; font-size: 12px;
+    p1{ color:orange; font-size: 12px;
   }
-  a{ color:black; background-color:orange;
+    a{ color:black; background-color:orange;
   }
-  a:hover{ color: white;
+    a:hover{ color: white;
   }
   
-</style>
-
+    </style>
     <body>
-        <center>
+    <center>
         <h1> Schools within Pennsbury School District </h1>
   
         <h2> Within this school district there are 11 elementary schools,
@@ -40,11 +39,10 @@
         target="blank"> Pennsbury School District </a></b></h3>
   
         <div id='map' style="height:600px; width:900px"></div>
-        
-        </center>
-        
-    <script>
-        var map = L.map('map').setView([40.208288, -74.845495], 12); 
+    </center>
+  
+  <script>
+    var map = L.map('map').setView([40.208288, -74.845495], 12); 
       L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
@@ -83,8 +81,6 @@
         layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
         }
         var geojsonlayer = L.geoJson(geo, {onEachFeature: onEachFeature}).addTo(map);
-
-        
     
       
       
