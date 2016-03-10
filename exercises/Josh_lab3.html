@@ -2,6 +2,7 @@
 <head>
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	<script src='js/josh_json.js'></script>
 </head>
 <body>
 	Josh's life! 
@@ -28,6 +29,7 @@
     		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
 		
+		/*
 		var hospitaljson = {
   		"type": "Feature",
   		"properties": {
@@ -99,6 +101,7 @@
     			"coordinates": [-75.132858, 40.112590]
   			}
 		};
+		*/
 		
 		L.geoJson([hospitaljson, cityjson, suburbjson, last_suburbjson, highschooljson, stadiumjson], {onEachFeature: onEachFeature}).addTo(map);
 		
