@@ -27,15 +27,13 @@ function onEachFeature(feature, layer) {
 var geojsonFeature = {
     "type": "Feature",
     "properties": {
-        "name": "Alexander Wilson Elementary School,
+        "name": "Alexander Wilson Elementary School",
         "popupContent": "Elementary School"},
     "geometry": {
     	"type": "Point",
         "coordinates": [39.94408, -75.208878]}};
 
-L.geoJson(geojsonFeature, {
-    onEachFeature: onEachFeature
-}).addTo(map);
+	L.geoJson(geojsonFeature, {onEachFeature: onEachFeature}).addTo(map);
 
 	</script>
 </body>
