@@ -26,8 +26,11 @@
 		    fillOpacity: 0.8
 		}
 		
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery Â© <a href="http://mapbox.com">Mapbox</a>',
+			maxZoom: 18,
+		    	id: 'fpolig01.n6j70eoi',
+		    	accessToken: 'pk.eyJ1IjoiZnBvbGlnMDEiLCJhIjoiOTE1YTk1YmVkYjZmODZlNDFiMzQ3ZDJlMmI3MjhhMTUifQ.3Xg0-PXs619FBb2LesZBFg'
 		}).addTo(map);
 		
 		L.geoJson([hospitaljson, cityjson, suburbjson, last_suburbjson, highschooljson, stadiumjson], {onEachFeature: onEachFeature}).addTo(map);
