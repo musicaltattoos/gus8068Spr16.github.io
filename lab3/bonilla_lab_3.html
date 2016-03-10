@@ -23,17 +23,6 @@ body {
 
 	<div id='map' style="height:800px; width:800px"></div>
 	      <script>
-		var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-  			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
-		});
-
-		var map = L.map('map', {
-  			scrollWheelZoom: false,
-  			center: [40.7127837, -74.0059413],
-  			zoom: 6
-		});
-
-		map.addLayer(layer);
 		
 	            comcast = L.marker([39.955241,-75.170423]).addTo(map)
 	            .bindPopup('<center><img src="http://i.imgur.com/QiYUVIn.jpg" width="300" height="200" alt="Comcast"><br><font color="blue">CITC</font>  | <b>Center City West</b></center><br> The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018.');
