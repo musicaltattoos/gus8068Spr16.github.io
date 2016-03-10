@@ -44,12 +44,12 @@
         </center>
         
     <script>
-        var layer = new L.StamenTileLayer("toner");
-        var map = new L.Map("element_id", {
-        center: new L.LatLng(40.208288, -74.845495),
-        zoom: 12
-        });
-        map.addLayer(layer);
+        var basemap = L.titleLayer(url,
+            {minZoom: 2,
+            maxZoom: 16,
+            type'png',
+            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.'
+            });
         
     var myGeoJSON={
         'type': 'FeatureCollection',
