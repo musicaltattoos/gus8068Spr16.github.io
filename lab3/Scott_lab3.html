@@ -12,18 +12,7 @@ var map = L.map('map').setView([39.9746138,-75.1478513], 14);
 
 var Esri_WorldStreetMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-}).addTo(map);
-
-var myGeoJSON = {
-	'type' : 'feature collection';
-	‘features’ : [
-		{'type':
-		'Feature', 
-		'properties':{
-		'name':'Samuel Powel School',
-		'caption':'this is the body text',
-		'geometry':{'type':'Point','coordinates':[39.9603237, -75.1957877]}},
-		.addTo(map);
+}).addTo(map)
 
 
   
