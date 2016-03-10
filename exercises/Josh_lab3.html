@@ -14,13 +14,6 @@
 		function onEachFeature(feature, layer){
 			if (feature.properties && feature.properties.popupContent){
 				layer.bindPopup(feature.properties.popupContent);
-				layer.on('mouseover', function (e) {
-			            this.openPopup();
-			        });
-			        layer.on('mouseout', function (e) {
-			            this.closePopup();
-			        });
-			}
 		}
 
 		var geojsonMarkerOptions = {
