@@ -24,8 +24,6 @@
 		    fillOpacity: 0.8
 		}
 		
-		var hospitalPopup = '<img src="http://www.uhsurology.com/images/sce/LOCATIONS/nazarethX.jpg" width="200" height="200" alt="Origin"><br>Nazareth Hostpital.<br>Where I was born.' 
-		
 		var hospitaljson = {
   		"type": "Feature",
   		"properties": {
@@ -37,6 +35,12 @@
     			"coordinates": [40.059417,-75.041380]
   			}
 		};
+		
+		L.geoJson(hospitaljson).addTo(map);
+		
+		/*
+		var hospitalPopup = '<img src="http://www.uhsurology.com/images/sce/LOCATIONS/nazarethX.jpg" width="200" height="200" alt="Origin"><br>Nazareth Hostpital.<br>Where I was born.' 
+		
 		
 		var cityPopup = '<img src="http://p.rdcpix.com/v03/lc197d944-m0xd-w640_h480_q80.jpg" width="200" height="200" alt="City"><br>First house I lived in.<br>I moved when I turned 9. This house was nice because there were a lot of kids on the block.'
 		var suburbPopup = '<img src="http://maps.googleapis.com/maps/api/streetview?size=306x306&location=2355%20Jenkintown%20Rd%2C%20Glenside%2C%20PA%2019038&sensor=false&client=gme-scpropertysharksrl&signature=hCpE_pLQSYLR41DtYWNoa-VMWGk" width="200" height="200" alt="Suburb"><br>First house outside of the city. Less people and more grass, so it was a bit foreign to me.'
@@ -53,10 +57,10 @@
 			pointToLayer: function(feature, latlng){
 				return L.circleMarker(latlng, geojsonMarkerOptions);
 			}
-			//onEachFeature: onEachFeature}).addTo(map);
+			onEachFeature: onEachFeature}).addTo(map);
 		}).addTo(map);
 		
-		/*
+		
 		hospital = L.marker(hospitaljson)
     		.bindPopup(hospitalPopup).addTo(map);
     		
