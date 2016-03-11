@@ -34,10 +34,6 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		]
 	}
 	},
-	
-	{
-	"type": "FeatureCollection", 
-	"featurtes": [
 		{
 		"type": "Feature",
 		"properties": {
@@ -47,13 +43,10 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		"geometry": 
 		{"type": "Point", 
 		"coordinates": 
-		[-75.169495, 39.989227
+		[39.989227, -75.169495
 		]
 	}
 	},
-	{
-	"type": "FeatureCollection", 
-	"featurtes": [
 		{
 		"type": "Feature",
 		"properties": {
@@ -63,14 +56,49 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		"geometry": 
 		{"type": "Point", 
 		"coordinates": 
-		[-75.226536, 39.941732
+		[39.941732, -75.226536
 		]
 	}
 	},
-	]
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Charles Carroll High School", 
+		"url": "http://media.northeasttimes.com/assets/image/2013/04/15/carroll1_338963902_r644x483.jpg?53e3587f98275bbc1c85a214515ac134f19524f7 width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[-75.110488, 39.979575
+		]
 	}
-	];
-
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Communications Technology School", 
+		"url": "http://www.newsworks.org/images/stories/flexicontent/l_commtechhs_600x400.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[-75.245735, 39.898484
+		]
+	}
+	},
+	{	"type": "Feature",
+		"properties": {
+		"Name": "Edward Bok Technical High School", 
+		"url": "https://livingnewdeal.org/wp-content/uploads/2015/01/Bok-Tech-HS.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[-75.160021, 39.925162
+		]
+	}
+	},
+	{
 var basemap = L.tileLayer(url, {
     subdomains: ['','a.','b.','c.','d.'],
     minZoom: 0,
