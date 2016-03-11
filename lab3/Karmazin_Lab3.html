@@ -65,11 +65,10 @@
         <script>
         
        function onEachFeature(feature, layer) {
-       popupOptions = {maxWidth: 120};
-        if (feature.properties && feature.properties.Name) {
-        layer.bindPopup(feature.properties.url + "<br>" + feature.properties.Name, popupOptions);
+    if (feature.properties && feature.properties.popupContent) {
+        layer.bindPopup(feature.properties.popupContent);
     }
-	}
+}
         
   var myGeoJSON = [{
       "type": "FeatureCollection",
