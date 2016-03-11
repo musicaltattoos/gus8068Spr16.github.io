@@ -34,20 +34,19 @@ var map = L.map('map', {
 map.addLayer(layer);
 
 function onEachFeature(feature, layer) {
-    if (feature.properties && feature.properties.Name) {
-        layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.Caption.img + "<br>" + feature.properties);
+    		if (feature.properties && feature.properties.Name) {
+        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Address);
     }
 }   
-
 var geoJsonFeature = [
 	{"type": "FeatureCollection",
   "features": [
     {"type": "Feature",
       "properties": {
-        "Name": "<b>P.A.W.S</b>",
-        "img": "<img src='http://www.packpeople.com/wp-content/uploads/2011/06/PAWS-logo-with-tagline.jpg' height=120 width=120/>",
-        "Address": "Address:100 N 2nd St,Philadelphia PA,19106",
-        "markerColor": "#00FF57"
+        "Name": "<b>XXX</b>",
+        "img": "<img src='linkhere' height=120 width=120/>",
+        "Address": "Address:address here",
+        "markerColor": "#FFFFFF"
         },
       "geometry": {
         "type": "Point",
