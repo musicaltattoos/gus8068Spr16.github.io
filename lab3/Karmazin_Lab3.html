@@ -60,10 +60,8 @@
     })
     basemap.addTo(map);
         
-      </script>
-        
-      <script>
-        
+      
+      
         
   var myGeoJSON = [{
       "type": "FeatureCollection",
@@ -88,6 +86,13 @@
           "coordinates": [40.246121, -74.873373]
         }},
         ]}];
+        
+        function onEachFeature(feature, layer) {
+       popupOptions = {maxWidth: 150};
+        if (feature.properties && feature.properties.Name) {
+        layer.bindPopup(feature.properties.url + "<br>" + feature.properties.Name, popupOptions);
+    }
+	}
         
 
         
