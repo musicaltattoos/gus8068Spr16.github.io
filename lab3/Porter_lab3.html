@@ -97,8 +97,9 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		[-75.160021, 39.925162
 		]
 	}
-	},
-	{
+	},]}];
+	function onEachFeature(feature, layer) {popupOptions = {maxWidth: 200};
+	if (feature.properties && feature.properties.Name) {layer.bindPopup(feature.properties.url + feature.properties.Name, popupOptions);}}
 var basemap = L.tileLayer(url, {
     subdomains: ['','a.','b.','c.','d.'],
     minZoom: 0,
