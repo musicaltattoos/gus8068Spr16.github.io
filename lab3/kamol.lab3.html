@@ -81,6 +81,11 @@
     			"geometry":{"type":"Point","coordinates":[23.846919, 90.402613]}
 		}
 		]}
+		
+	L.geoJson(geoJsonFeature, {
+  					onEachFeature: onEachFeature
+  				 
+ 	}).addTo(map);
 </script>
 </body>
 </html>
