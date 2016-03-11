@@ -10,14 +10,14 @@ body{background-color:gray;
 }
 h1{font-family:Arial Black; font-size:22px;
 }
-p1{font-family:Arial Black; font-size:18px;
+p1{font-family:Arial Black; font-size:15px;
 }
 </style>
 
 <center>
 <h1><font color = "green">Important Place for me in Bangladesh</font></h1>
 	<h2><font color = "red">Created by Kamol K Sarker</font></h2>
-<p1><font color = "black">Click each marker to view my life event in that specific location.</font></p1><br>
+<p1><font color = "black">Click on each marker to view my life events at that specific location.</font></p1><br>
  
  <div id = 'map' style="height: 800px;width: 1000px;"></div>
 
@@ -33,7 +33,7 @@ var map = L.map('map', {
   zoom: 9,
 });
 map.addLayer(layer);
-//add Geojson layer to the map ONCE the file is loaded.
+
 function onEachFeature(feature, layer) {
     		if (feature.properties && feature.properties.Name) {
         	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption);
