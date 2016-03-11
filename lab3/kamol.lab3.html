@@ -18,6 +18,7 @@
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
+		
 		var myGeoJSON = {
 	‘type’ : ‘FeatureCollection’,
 	‘features’ : [
@@ -26,16 +27,19 @@
 				'name':'Birth Place',
 				‘caption’:'Village called Hodda in southeastern of Bangladesh under the Koira Upozilla',
 				‘img’:’<img src=”https://www.facebook.com/photo.php?fbid=979923888744876&set=a.901430153260917.1073741832.100001818224401&type=3&theater”/>’},
-			'geometry':{'type':'Point','coordinates':[22.447105, 89.390267]}},
+			'geometry':{'type':'Point','coordinates':[22.447105, 89.390267]}}
+			
+		},
+		
 		{'type':'Feature',
  			'properties':{
 				'name':'Mangrove Forest',
 				‘caption’:'Situated at the southwestern part of Bangladesh'
 				‘img’:’<img src=”http://static.panoramio.com/photos/large/7360922.jpg”/>’},
 			'geometry':{'type':'Point','coordinates':[22.212822, 89.249809]}}
-
-	]};
-
+		}	
+	]}
+		
 </script>
 </body>
 </html>
