@@ -6,11 +6,11 @@
 <body>
 
 	<style> 
-	body{ background-color:green;
+	body{ background-color:red;
 	};
 	</style>
 	
-	<h1><font color = "red">Important Place for me in Bangladesh</font></h1>
+	<h1><font color = "green">Important Place for me in Bangladesh</font></h1>
 	<div id='map' style="height:750px; width:1000px"></div>
 	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 <script>
@@ -24,15 +24,29 @@
     'features':[
     	{'type':'Feature',
     		"properties": {
-        	"name": "Coors Field",
-                	"popupContent": "This is where the Rockies play!"
-                	"url":’<img src=”https://scontent.fash1-1.fna.fbcdn.net/hphotos-xpa1/v/t1.0-9/12647175_979923888744876_5228085949895857131_n.jpg?oh=457974ff06a4dce7b23b7408f583ad34&oe=57568969” width=200 height=200 />’
-    },
-    "geometry": {
-        "type": "Point",
-        "coordinates": [22.447105, 89.390267]
-    }
-}];
+    		"OBJECTID": 2,
+        	"name": "Birth Place",
+                	"popupContent": "South West part of Bangladesh",
+                	"url":"<img src='https://scontent.fash1-1.fna.fbcdn.net/hphotos-xpa1/v/t1.0-9/12647175_979923888744876_5228085949895857131_n.jpg?oh=457974ff06a4dce7b23b7408f583ad34&oe=57568969' width=200 height=200 />"
+    		},
+    		"geometry": {
+        	"type": "Point",
+        	"coordinates": [22.447105, 89.390267]
+    		}
+	},
+	{'type':'Feature',
+    		"properties": {
+    		"OBJECTID": 3,
+        	"name": "Mangrove Forest",
+                	"popupContent": "This is the biggest forest in the world",
+                	"img":"<img src='http://static.panoramio.com/photos/large/7360922.jpg' width=200 height=200 />"
+    		},
+    		"geometry": {
+        	"type": "Point",
+        	"coordinates": [22.212822, 89.249809]
+    		}
+	}
+];
 </script>
 </body>
 </html>
