@@ -17,18 +17,8 @@
 var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
     return s.toLowerCase();
 });
-var basemap = L.tileLayer(url, {
-    subdomains: ['','a.','b.','c.','d.'],
-    minZoom: 0,
-    maxZoom: 17,
-    type: 'png',
-    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-})
-basemap.addTo(map);
 
 
-	</script>
-	<script>
 	var myGeoJSON = {
 	‘type’ : ‘FeatureCollection’,
 	‘features’ : [
@@ -43,7 +33,18 @@ basemap.addTo(map);
 'name':'myPlace2',
 ‘caption’:'this is ALSO the body text'
 ‘img’:’<img src=”http://link/to/source.jpg”/>’},
-'geometry':{'type':'Point','coordinates':[-75.1474439, 39.9716709]}}]}.addTo(map)
+'geometry':{'type':'Point','coordinates':[-75.1474439, 39.9716709]}}]};
+
+
+var basemap = L.tileLayer(url, {
+    subdomains: ['','a.','b.','c.','d.'],
+    minZoom: 0,
+    maxZoom: 17,
+    type: 'png',
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
+})
+basemap.addTo(map);
+
 
 
 	</script>
