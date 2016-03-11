@@ -44,7 +44,7 @@ body {
 	// add GeoJSON layer to the map once file is loaded
 	function onEachFeature(feature, layer) {
     		if (feature.properties && feature.properties.Name) {
-        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Address);
+        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption);
 	}
 	}
 	var geoJsonFeature = [
@@ -54,7 +54,7 @@ body {
       			"properties": {
         		"Name": "<center><strong>CITC  | Center City West</strong></center>",
         		"img": "<center><img src='http://i.imgur.com/QiYUVIn.jpg' height=200 width=300/></center>",
-        		"Address": "The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018.",
+        		"Caption": "The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018.",
         		"markerColor": "#FFFFFF"
         		},
       		"geometry": {
@@ -66,7 +66,7 @@ body {
       			"properties": {
         		"Name": "<center><strong>SLS  | Avenue of the Arts</strong></center>",
         		"img": "<center><img src='http://i.imgur.com/mcIz9N9.jpg' height=200 width=300/></center>",
-        		"Address": "Commissioned by Dranoff Properties, the 47 story tower broke ground in Spring of 2015. It will feature 125 condos and 150 hotel rooms, combining a four or five star hotel with uber-luxe condos and entertainment space.",
+        		"Caption": "Commissioned by Dranoff Properties, the 47 story tower broke ground in Spring of 2015. It will feature 125 condos and 150 hotel rooms, combining a four or five star hotel with uber-luxe condos and entertainment space.",
         		"markerColor": "#FFFFFF"
         		},
       		"geometry": {
@@ -78,7 +78,7 @@ body {
       			"properties": {
         		"Name": "<center><strong>Temple  | Temple University</strong></center>",
         		"img": "<center><img src='http://i.imgur.com/GvTIPRb.jpg' height=200 width=300/></center>",
-        		"Address": "Constructed by Norweigan firm Snohetta, this building will serve as a library. The library will feature an automated book retrieval system. Construction is expected to begin soon, with an opening scheduled for Fall 2018.",
+        		"Caption": "Constructed by Norweigan firm Snohetta, this building will serve as a library. The library will feature an automated book retrieval system. Construction is expected to begin soon, with an opening scheduled for Fall 2018.",
         		"markerColor": "#FF0000"
         		},
       		"geometry": {
@@ -90,7 +90,7 @@ body {
       			"properties": {
         		"Name": "<center><strong>Fashion Outlets of Philadelphia  | Market East</strong></center>",
         		"img": "<center><img src='http://i.imgur.com/O6hJLw0.jpg' height=200 width=300/></center>",
-        		"Address": "The Gallery was long considered a dead mall. The Fashion Outlets of Philadelphia serves as a complete remodeling of this site in an effort to revitalize and attract retailers. The grand opening is expected sometime in 2017.",
+        		"Caption": "The Gallery was long considered a dead mall. The Fashion Outlets of Philadelphia serves as a complete remodeling of this site in an effort to revitalize and attract retailers. The grand opening is expected sometime in 2017.",
         		"markerColor": "#FFFFFF"
         		},
       		"geometry": {
@@ -102,7 +102,7 @@ body {
       			"properties": {
         		"Name": "<center><strong>CHOP Schuykill Project  | Southwest Center City</strong></center>",
         		"img": "<center><img src='https://i.imgur.com/wLfvzND.jpg' height=200 width=300/></center>",
-        		"Address": "Childrens Hospital is planning to develop Schuylkill Avenue into office and research space over the next few decades. The first phase of this involves the erection of a 22-story office tower at the base of Bainbridge Street.",
+        		"Caption": "Childrens Hospital is planning to develop Schuylkill Avenue into office and research space over the next few decades. The first phase of this involves the erection of a 22-story office tower at the base of Bainbridge Street.",
         		"markerColor": "#FFFFFF"
         		},
       		"geometry": {
@@ -114,7 +114,7 @@ body {
       			"properties": {
         		"Name": "<center><strong>Cira Centre South  | University City</strong></center>",
         		"img": "<center><img src='https://i.imgur.com/23h0Az2.jpg' height=200 width=300/></center>",
-        		"Address": "This project is a complex of two skyscrapers, consisting of the commercial Cira Walnut Tower and the residential Cira Chestnut Tower. The Cira Chestnut tower is already complete.",
+        		"Caption": "This project is a complex of two skyscrapers, consisting of the commercial Cira Walnut Tower and the residential Cira Chestnut Tower. The Cira Chestnut tower is already complete.",
         		"markerColor": "#008000"
         		},
       		"geometry": {
