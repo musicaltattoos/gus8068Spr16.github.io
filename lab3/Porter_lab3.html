@@ -11,8 +11,6 @@
 	<div id='map' style="height:700px; width:700px"></div>
 	<script>
 	
-	var map = L.map('map').setView([39.9588, -75.1676], 11);
-		
 	var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
 var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
     return s.toLowerCase();
@@ -43,9 +41,9 @@ var basemap = L.tileLayer(url, {
     maxZoom: 17,
     type: 'png',
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-})
-basemap.addTo(map);
-
+});
+var map = L.map('map').addLayer(basemap).setView([39.9588, -75.1676], 11)
+L.geoJson(myGeoJson, {onEachFeature: onEachFeature}).addTo(map);
 
 
 	</script>
