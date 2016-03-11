@@ -61,7 +61,23 @@
     basemap.addTo(map);
         
       </script>
+      
       <script>
+      
+      
+      
+  map.addLayer(layer);
+  function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.Name) {
+        layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Address);
+    }
+    }
+    L.geoJson(myGeoJSON, {
+	  onEachFeature: onEachFeature
+	   }).addTo(map);
+	   
+	   
+	   
         
   var myGeoJSON = [{
       "type": "FeatureCollection",
