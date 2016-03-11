@@ -31,9 +31,6 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 	"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Shaw_School_Philly.JPG/1920px-Shaw_School_Philly.JPG width=150 height=150 />"},
 	"geometry": {"type": "Point", "coordinates": [39.941732, -75.226536]}},]}];
 
-	function onEachFeature(feature, layer) {PopupOptions = {maxWidth: 200}; 
-	if (feature.properties && feature.properties.Name) {layer.bindPopup(feature.properties.url + feature.properties.Name, PopupOptions);}}
-
 var basemap = L.tileLayer(url, {
     subdomains: ['','a.','b.','c.','d.'],
     minZoom: 0,
