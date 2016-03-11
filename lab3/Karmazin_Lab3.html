@@ -24,9 +24,7 @@
   }
   a:hover{ color: white;
   }
-  .leaflet-popup-content-wrapper {
-    background: #light gray;
-  }
+  
   
 </style>
 <body>
@@ -62,27 +60,6 @@ var basemap = L.tileLayer(url, {
 })
 basemap.addTo(map);
         
-        var myGeoJSON={
-        'type': 'FeatureCollection',
-        'features':[
-        
-                {'type':'Feature',
-                    'properties':{
-                        'OBJECTID': 1,
-                        'name':'Afton Elementary'
-                        'caption':'Afton Elementary'
-                        'img':'<imgsrc="http://www.sunrise-eng.com/uploads/gallery/21fd1f17606b8224ad5087f0a1e4475f.jpg"/>'}
-                    'geometry':{'type':'Point','coordinates':[40.245704, -74.876651]}},
-                    
-                    
-                {'type':'Feature',
-                    'properties':{
-                        'OBJECTID': 2,
-                        'name':'Quarry Hill Elementary'
-                        'caption':'Quarry Hill Elementary'
-                        'img':'<imgsrc="http://pimdept.org/wp-content/uploads/2013/01/Pennsbury-Schools-QuarryHillELEM-300x192.jpg"/>'}
-                    'geometry':{'type':'Point','coordinates':[40.246121, -74.873373]}}
-
         
         </script>
         </body>
