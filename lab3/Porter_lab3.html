@@ -69,7 +69,7 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		"geometry": 
 		{"type": "Point", 
 		"coordinates": 
-		[-75.110488, 39.979575
+		[39.979575, -75.110488
 		]
 	}
 	},
@@ -82,11 +82,12 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		"geometry": 
 		{"type": "Point", 
 		"coordinates": 
-		[-75.245735, 39.898484
+		[39.898484, -75.245735
 		]
 	}
 	},
-	{	"type": "Feature",
+		{	
+		"type": "Feature",
 		"properties": {
 		"Name": "Edward Bok Technical High School", 
 		"url": "https://livingnewdeal.org/wp-content/uploads/2015/01/Bok-Tech-HS.jpg width=150 height=150" />"
@@ -94,12 +95,89 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		"geometry": 
 		{"type": "Point", 
 		"coordinates": 
-		[-75.160021, 39.925162
+		[39.925162, -75.160021
 		]
 	}
-	},]}];
-	function onEachFeature(feature, layer) {popupOptions = {maxWidth: 200};
-	if (feature.properties && feature.properties.Name) {layer.bindPopup(feature.properties.url + feature.properties.Name, popupOptions);}}
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Fairhill Elementary School", 
+		"url": "http://greatphillyschools.org/uploads/files/840389219484261375-fairhill-bldg.0.50.1600.960.full.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.925162, -75.142141
+		]
+	}
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "General John F. Reynolds Elementary School", 
+		"url": "http://greatphillyschools.org/uploads/files/116678432920750086-reynolds-elementary-school-4.0.122.3648.2188.full.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.977628, -75.173975
+		]
+	}
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "George Pepper Middle School", 
+		"url": "http://thenotebook.org/uploads/files/914833571479262702-george-pepper-middle-school.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.897079, -75.248837
+		]
+	}
+	},
+	
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "George Washington Elementary School", 
+		"url": "http://hiddencityphila.org/wp-content/uploads/2012/06/Washington-5th-and-Federal.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[40.106683, -75.026139
+		]
+	}
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Germantown High School", 
+		"url": "https://buildgreatschools.files.wordpress.com/2013/04/gtown2.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[40.040398, -75.176011
+		]
+	}
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "John G. Whittier Elementary School", 
+		"url": "https://buildgreatschools.files.wordpress.com/2013/04/dsc_0068.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[40.002525, -75.174011
+		]
+	}
+	},
 var basemap = L.tileLayer(url, {
     subdomains: ['','a.','b.','c.','d.'],
     minZoom: 0,
