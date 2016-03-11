@@ -38,22 +38,23 @@ function onEachFeature(feature, layer) {
     }
 }   
 
+
 var geoJsonFeature = [
 	{"type": "FeatureCollection",
   "features": [
     {"type": "Feature",
       "properties": {
-        "Name": "<b>Samuel Powel School</b>",
+        "Name": "<b>P.A.W.S</b>",
         "img": "<img src='http://www.packpeople.com/wp-content/uploads/2011/06/PAWS-logo-with-tagline.jpg' height=120 width=120/>",
-        "Caption": "<br> Black - 74.4 percent<br>White - 9.2 percent<br>Asian - 4.1 percent<br>Other - 11.6 percent<br><font color = "green"><b>SPP Score - 85.8</b></font>",
+        "Address": "Address:100 N 2nd St,Philadelphia PA,19106",
         "markerColor": "#00FF57"
         },
       "geometry": {
         "type": "Point",
         "coordinates": [-75.143401,39.952172]
       }
+    }
     ];
-    
     L.geoJson(geoJsonFeature, {
   				 onEachFeature: onEachFeature
   				 
