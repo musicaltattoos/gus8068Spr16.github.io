@@ -19,43 +19,12 @@ p1{font-family:century; font-size:14px;
  <div id = 'map' style="height: 600px;width: 800px;"></div>
 
 <script>
-
-var Esri_WorldStreetMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+var map = L.map('map').setView([39.9746138,-75.1478513], 14);
+ = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 }).addTo(map)
 
-var myGeoJSON = [
-  {
- "type": "FeatureCollection",
-  "features": [
-   
-    {
-      "type": "Feature",
-      "properties": {
-        "OBJECTID": 2,
-        "Name": "<b>Bourbon & Branch</b><br>Monday through Friday 5pm – 7pm / Tuesdays til 11pm<br>$5 Old Fashioned<br>$5 Whiskey Sours",
-        "url": "<img src='https://thesanfranciscobarexperiment.files.wordpress.com/2010/01/dsc00120.jpg' width=200 height=200 />"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -75.1408,
-          39.9620
-        ]
-      }
-    }
-    
-    
-}
-var map = L.map('map').setView([39.9746138,-75.1478513], 14);
-function onEachFeature(feature, layer) {
-       popupOptions = {maxWidth: 150};
-        if (feature.properties && feature.properties.Name) {
-        layer.bindPopup(feature.properties.url + "<br>" + feature.properties.Name, popupOptions);
-	var map = L.map("map")
-	L.geoJson(myGeoJSON, {
-	 onEachFeature: onEachFeature
-	}).addTo(map);
+
 
     
   
