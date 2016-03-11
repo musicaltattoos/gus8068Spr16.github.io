@@ -45,21 +45,36 @@
   
   <script>
    
-    var map = L.map('map').setView([40.208288, -74.845495], 12); 
+  var map = L.map('map').setView([40.208288, -74.845495], 12); 
     
-    var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
-var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
+  var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
+    var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
     return s.toLowerCase();
-});
-var basemap = L.tileLayer(url, {
+    });
+  var basemap = L.tileLayer(url, {
     subdomains: ['','a.','b.','c.','d.'],
     minZoom: 0,
     maxZoom: 17,
     type: 'png',
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-})
-basemap.addTo(map);
+    })
+    basemap.addTo(map);
         
+  var myGeoJSON = [{
+      "type": "Feature",
+      "properties": {
+          "OBJECTID": 1,
+          "name":"<b>Afton Elementary</b>",
+          "url": "<imgsrc="http://www.sunrise-eng.com/uploads/gallery/21fd1f17606b8224ad5087f0a1e4475f.jpg"/>'}
+      }}],
+        "geometry": {"type": "Point",
+        "coordinates": [40.245704, -74.876651]},
+        
+      
+      
+      
+  }]
+
         
         </script>
         </body>
