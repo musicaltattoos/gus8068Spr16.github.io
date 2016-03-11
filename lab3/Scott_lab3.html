@@ -21,10 +21,12 @@ p1{font-family:century; font-size:18px;
  <div id = 'map' style="height: 600px;width: 800px;"></div>
 
 <script>
+//intialize the map
 var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
 });
 
+//load tile layer
 var map = L.map('map', {
   scrollWheelZoom: true,
   center: [39.951557, -75.151643],
@@ -32,7 +34,7 @@ var map = L.map('map', {
 });
 
 map.addLayer(layer);
-
+//add Geojson layer to the map ONCE the file is loaded.
 function onEachFeature(feature, layer) {
     		if (feature.properties && feature.properties.Name) {
         	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Address);
@@ -50,7 +52,7 @@ var geoJsonFeature = [
         },
       "geometry": {
         "type": "Point",
-        "coordinates": [-75.143401,39.952172]
+        "coordinates": [39.9603237, -75.1957877]]
 	 }
        },
        ]
