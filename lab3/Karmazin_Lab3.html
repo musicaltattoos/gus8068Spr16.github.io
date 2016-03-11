@@ -60,8 +60,8 @@
     })
     basemap.addTo(map);
         
-      
-      
+      </script>
+      <script>
         
   var myGeoJSON = [{
       "type": "FeatureCollection",
@@ -87,12 +87,6 @@
         }},
         ]}];
         
-        function onEachFeature(feature, layer) {
-       popupOptions = {maxWidth: 150};
-        if (feature.properties && feature.properties.Name) {
-        layer.bindPopup(feature.properties.url + "<br>" + feature.properties.Name, popupOptions);
-    }
-	}
         
 
         
