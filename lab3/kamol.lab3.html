@@ -20,17 +20,19 @@
 		}).addTo(map);
 		
 	var geojsonFeature = {
-    "type": "Feature",
-    "properties": {
-        "name": "Coors Field",
-        "amenity": "Baseball Stadium",
-        "popupContent": "This is where the Rockies play!"
+    "type": "FeatureCollection",
+    'features':[
+    	{'type':'Feature',
+    		"properties": {
+        	"name": "Coors Field",
+                	"popupContent": "This is where the Rockies play!"
+                	"url":’<img src=”https://scontent.fash1-1.fna.fbcdn.net/hphotos-xpa1/v/t1.0-9/12647175_979923888744876_5228085949895857131_n.jpg?oh=457974ff06a4dce7b23b7408f583ad34&oe=57568969” width=200 height=200 />’
     },
     "geometry": {
         "type": "Point",
         "coordinates": [22.447105, 89.390267]
     }
-};
+}];
 </script>
 </body>
 </html>
