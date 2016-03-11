@@ -18,8 +18,26 @@
 		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 		}).addTo(map);
-		
-        	var geojsonFeature = {"type": "Featurecollection", "properties": {"name": "Birth Place", "amenity": "Southwestern part of Bangladesh", "popupContent": "This is the place where I bron"}, "geometry": {"type": "Point","coordinates": [22.447105,89.390267]}};
+		var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+			'properties':{
+			'name':'Birth Place',
+			‘caption’:'Village called Hodda in southeastern of Bangladesh under the Koira Upozilla.',
+			‘img’:’<img src=”https://www.facebook.com/photo.php?fbid=979923888744876&set=a.901430153260917.1073741832.100001818224401&type=3&theater”/>’},
+		'geometry':{'type':'Point','coordinates':[22.447105,89.390267]}}
+		},
+		{'type':'Feature',
+ 			'properties':{
+			'name':'Mangrove Forest',
+			‘caption’:'Situated at the southwestern part of Bangladesh.'
+			‘img’:’<img src=”https://www.google.com/search?q=mangrove+forest&biw=1440&bih=767&tbm=isch&imgil=RvoX97bo-#imgrc=S44aWltzIqYpAM%3AQkf7M%253A%253BIbp4ckOhjnaVHM%253Bhttps%25253A%25252F%25252Fen.wikipedia.org%25252Fwiki%25252FMangrove&source=iu&pf=m&fir=RvoX97bo-Qkf7M%253A%252CIbp4ckOhjnaVHM%252C_&dpr=1&usg=__YHzISx30fwtsDXUbRsZg7Hs4fWE%3D&ved=0ahUKEwiogt-V89LKAhVCKx4KHeBPCvcQyjcIiwE&ei=cmOtVqiBNsLWeOCfqbgP#imgrc=Ggocwac3LTuNxM%3A&usg=__YHzISx30fwtsDXUbRsZg7Hs4fWE%3D”/>’},
+		'geometry':{'type':'Point','coordinates':[22.212822, 89.249809]}}
+		}
+		]};
+
+        
 </script>
 </body>
 </html>
