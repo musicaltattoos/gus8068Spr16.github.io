@@ -18,22 +18,22 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 
 
 	var myGeoJSON = [
-	{
-	"type": "FeatureCollection", 
-	"featurtes": [
-	{
-	"type": "Feature",
-	"properties": {
-	"Name": "Alexander Wilson Elementary School", 
-	"url": "<http://cdn.phillymag.com/wp-content/uploads/2014/02/Alexander-Wilson-Elementary-School-6.jpg width=150 height=150" />"	
-	},
-	"geometry": 
-	{"type": "Point", 
-	"coordinates": 
-	[39.94408, -75.208878
-		]
-		}
+		{
+		"type": "FeatureCollection", 
+		"featurtes": [
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Alexander Wilson Elementary School", 
+		"url": "<http://cdn.phillymag.com/wp-content/uploads/2014/02/Alexander-Wilson-Elementary-School-6.jpg width=150 height=150" />"	
 		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.94408, -75.208878
+		]
+	}
+	},
 		{
 		"type": "Feature",
 		"properties": {
@@ -178,7 +178,8 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		]
 	}
 	},
-		{"type": "Feature",
+		{
+		"type": "Feature",
 		"properties": {
 		"Name": "John L. Kinsey Elementary School", 
 		"url": "https://buildgreatschools.files.wordpress.com/2013/04/kinsey2.jpg width=150 height=150" />"
@@ -190,7 +191,58 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		]
 	}
 	},
-	{
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Joseph C. Ferguson Elementary School", 
+		"url": "https://buildgreatschools.files.wordpress.com/2013/04/dsc_0075.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.982545, -75.14634
+		]
+	}
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Joseph Leidy Elementary School", 
+		"url": "http://greatphillyschools.org/uploads/files/118016543487793254-lhf-7518-joseph-leidy-1.0.19.605.363.full.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.975101, -75.212528
+		]
+	}
+	},	
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Leslie P. Hill Elementary School", 
+		"url": "https://buildgreatschools.files.wordpress.com/2013/04/dsc_0042.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.990397, -75.184583
+		]
+	}
+	},	
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Robert E. Lamberton High School", 
+		"url": "http://www.preservationalliance.com/directory/mcmar/images/large/1340049924.jpg width=150 height=150">"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.990397, -75.184583
+		]
+	}
+	},	
 var basemap = L.tileLayer(url, {
     subdomains: ['','a.','b.','c.','d.'],
     minZoom: 0,
