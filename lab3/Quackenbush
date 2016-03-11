@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Mapping Alan Lomax's Southern Journey</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script>L_DISABLE_3D = true;</script>
+    <script src="mapbox.js"></script>
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
+    <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
+    <style>#map { height: 700px; width: 1100px;}</style>
+    <h1 class="header">Mapping Alan Lomax's Southern Journey</h1>
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <p class="header"><img src='http://38.media.tumblr.com/avatar_a44b6c90cbd7_128.png'/></p>
+
+        <ul>
+	<p> Alan Lomax (1915–2002) was one of the great ethnomusicologists and field collectors of folk music of the twentieth century, recording thousands of songs throughout the United States and Europe. This map displays his travels through Alabama, Arkansas, Georgia, Kentucky, Mississippi, Tennessee, and Virginia to record the little-known southern backcountry and blues music that we consider uniquely American.</p>
+        </ul>
+
+
+      </header>
+      <section>
+        <h3>
+        	<div id='map'</div>
+		<script>
+		L.mapbox.accessToken = 'pk.eyJ1IjoibXF1YWNrZW5idXNoIiwiYSI6ImNpaDVvNnZzMzAxbWh0eGx4NHJob2NzZHgifQ.xXD8TNhco44xCbisjTgQSw';
+		
+			var geojson = [
+		 
+		      {
+		        "type": "FeatureCollection",
+		        "features": [
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -81.293274,
+				37.269597
+		              ]
+		            },
+		            "properties": {
+		              "name": "Texas Gladden",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0007.jpg'/><br>Texas Gladden was an American folk singer, best known for her traditional Appalachian ballad style of singing.  Gladden knew more than 300 songs by memory, having learned them from her family, factory co-workers, and the radio. <br><br> <a href='https://www.youtube.com/watch?v=BQ9M-sPtH7A'>Lonely Tombs by Texas Gladden</a>"
+		            }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -80.914850,
+				36.657543
+		              ]
+		            },
+		            "properties": {
+		              "name": "Wade Ward",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0059.jpg'/><br> Wade Ward was an American old-time musician from Galax, Virginia known for his fiddle and clawhammer banjo recordings.  Lomax recorded him multiple times beginning as early as 1933.  Lomax's recordings during the Southern Journey were the last ones he did of longtime friend Wade Ward.<br><br><a href='https://www.youtube.com/watch?v=EqRv9QtfDjk'>Chilly Winds by Wade Ward</a>"
+		            }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -81.681062,
+				36.811559
+		              ]
+		            },
+		            "properties": {
+		              "name": "Spencer Moore",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0083.jpg'/><br>Born in Tennessee in 1919, Spencer Moore love of folk music began at an early age.  A tobacco farmer his whole life, Moore attended the White Top Folk Festival in 1933 and was inspired to start playing folk music with his brother Joe. <br><br><a href='https://www.youtube.com/watch?v=-ZE_QGoGH44'>The Girl I Left Behind by Spencer Moore</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -82.986838,
+				37.141485
+		              ]
+		            },
+		            "properties": {
+		              "name": "Mt. Olivet Old Regular Church",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0108.jpg'/><br>The Mount Olivet Old Regular Church was a congregation staged in the woods outside of Blackley, Kentucky.  Led by the charismatic Reverend Elder I.D. Back, the church services were almost exclusively in song. <br><br> <a href='https://www.youtube.com/watch?v=diUW3YOLgrw'>Poor Pilgrim of Sorrow by Elder I.D. Back</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -89.947475,
+				34.515610
+		              ]
+		            },
+		            "properties": {
+		              "name": "Mississippi Fred McDowell",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0335.jpg'/><br>A sharecropper who sang and played guitar, McDowell wrote hundreds of work songs.  Out of all the musicians Lomax recorded on his southern journey, Fred McDowell became the most famous. <br><br> <a href='https://www.youtube.com/watch?v=2jj7Etk64k4'>Wished I Was in Heaven Sitting Down by Mississippi Fred McDowell</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -92.158973,
+				35.565491
+		              ]
+		            },
+		            "properties": {
+		              "name": "Almeda Riddle",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0448.jpg'/><br>Almeda Riddle was one of America's most famous ballad singers. Born and raised in Cleburne County, Arkansas, Riddle sang hundreds of ballads, hymns, and children's songs without any instrumental accompaniment.<br><br><a href='https://www.youtube.com/watch?v=0xer50aiy5c'>Lonesome Dove by Almeda Riddle</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -90.499272,
+ 				33.919706
+		              ]
+		            },
+		            "properties": {
+		              "name": "Mississippi State Penitentiary",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0177.jpg'/><br>Alan Lomax found some of the most powerful music of the American South in the region’s oppressive prison system. The harmonic complexity and dynamic range of music recorded by Lomax at the Mississippi State Penitentiary in Parchman remain among the most vivid in African American song.<br><br><a href='https://www.youtube.com/watch?v=g7Y92i170vI'>Dollar Mamie by Floyd Batts and Unidentified Prisoners</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -88.181692,
+				32.572370
+		              ]
+		            },
+		            "properties": {
+		              "name": "Vera Ward Hall",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0472.jpg'/><br>Adell Hall Ward, better known as Vera Ward Hall was an American folk singer, born in Livingston, Alabama. She spent most of her life as a domestic servant and sung powerful children's songs, spirituals, and blues.<br><br><a href='https://www.youtube.com/watch?v=iKurXTH9abY'>Black Woman(Wild Ox Moan) by Vera Ward Hall</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -76.717499,
+				37.269366
+		              ]
+		            },
+		            "properties": {
+		              "name": "Bessie Jones",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0493.jpg'/><br>Bessie Smith Jones was an African American gospel and folk singer who was famous for her gospel songs, party game songs, ring shouts and hollers.  Her four parents were born into slavery and they taught her about slave life, including slave music, which shaped her as a musician. <br><br> <a href='https://www.youtube.com/watch?v=Czi4kA24DaA'>O Day by Bessie Jones and Group</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -85.906267,
+				34.449035
+		              ]
+		            },
+		            "properties": {
+		              "name": "United Sacred Harp Convention",
+		              "description": "<img src='http://www.rootsworld.com/rw/feature/harp3.gif'/><br>Sacred Harp singing is a form of a capella group singing which splits a group into altos, basses, trebles and tenors. The Sacred Harp hymn book first published in 1844 and is still in use. <br><br> <a href='https://www.youtube.com/watch?v=vx0lCO3GEqI&index=4&list=PLUSRfoOcUe4ZD1Gns_BfK_hBhZxlvTumR'>Sherburne by United Sacred Harp Convention</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -76.430186,
+				36.863038
+		              ]
+		            },
+		            "properties": {
+		              "name": "The Union Choir Of The Church Of God And Saints Of Christ",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0681.jpg'/><br>The Union Choir Of The Church Of God And Saints Of Christ was a small black Jewish-Christian church established in Kansas in 1896 and later moved to Suffolk, Virginia.  Lomax made two tape recordings of the spiritual songs sung by church's choir.<br><br><a href='https://www.youtube.com/watch?v=jt9E31p3b54'>None but the Righteous by Union Choir of the Church of God and Saints of Christ</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -87.370570,
+				34.970813
+		              ]
+		            },
+		            "properties": {
+		              "name": "George Fields",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0144.jpg'/><br>George Fields is a fiddler and square dancer from Lexington, Alabama. <br><br> <a href='https://www.youtube.com/watch?v=VCMZ7AwFg0M&list=PLUSRfoOcUe4ZD1Gns_BfK_hBhZxlvTumR&index=7'>Bob Johnson's Tune by George Fields</a>",
+		          
+		            }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -80.733204,
+				36.767169
+		              ]
+		            },
+		            "properties": {
+		              "name": "Glen Stoneman",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0031.jpg'/><br>Glen Stoneman was a fiddler from Hillsville, Virginia who frequently performed with his brother George. <br><br> <a href='https://www.youtube.com/watch?v=FpACmnZgj5w'>John Henry by Glen Stoneman</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -78.324872,
+				38.014403
+		              ]
+		            },
+		            "properties": {
+		              "name": "E.C. Ball",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0044.jpg'/><br>E.C. Ball was a fingerstyle guitarist, country gospel singer, and folklorist from Rugby, Virginia who frequently performed with his wife Orna and their Friendly Gospel Singers in churches and on the radio. <br><br> <a href='https://www.youtube.com/watch?v=HuutCctVXe8'>Tribulations by E.C. Ball and Lacey Richards</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -92.317409,
+				35.870321
+		              ]
+		            },
+		            "properties": {
+		              "name": "Neal Morris",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0458.jpg'/><br>Neal Morris is a banjo player and folk singer from Timbo, Arkansas. <br><br> <a href='https://www.youtube.com/watch?v=t2ZbwQRjZSo'>The Juice of Forbidden Fruit by Neal Morris</a>"
+		              }
+		          },
+		          {
+		            "type": "Feature",
+		            "geometry": {
+		              "type": "Point",
+		              "coordinates": [
+		                -89.971947,
+				34.616390
+		              ]
+		            },
+		            "properties": {
+		              "name": "Lucius Smith",
+		              "description": "<img src='http://c0383352.cdn.cloudfiles.rackspacecloud.com/thumbs/01.01.0380.jpg'/><br>Lucius Smith is a banjo player from Senatobia, Mississippi who frequently plays with harmonica player and close friend Sid Hemphill. <br><br> <a href='https://www.youtube.com/watch?v=RPpq6Lonjs0'>Goodbye Honey, You Call That Gone by Lucius Smith</a>"
+		              }
+		          }
+		        ]
+		      }
+		
+		];
+		function onEachFeature(feature, layer) {
+		        layer.bindPopup("<h1>"+feature.properties.name+"</h1>"+feature.properties.description);
+		}
+		
+		
+		var streets = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+		}),
+		    topographic   = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Physical_Map/MapServer/tile/{z}/{y}/{x}', {
+			attribution: 'Tiles &copy; Esri &mdash; Source: US National Park Service'
+		}), stamen = L.tileLayer('http://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}.{ext}', {
+			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+			subdomains: 'abcd',
+			ext: 'png'
+		})
+		;
+		
+		var map = L.map('map', {
+		    center: [35.331086, -83.368441],
+		    zoom: 6,
+		    layers: [streets]
+		});
+		
+		var baseMaps = {
+		    "Streets": streets,
+		    "Topographic": topographic,
+		    "Stamen" : stamen
+		};
+		
+	
+		L.control.layers(baseMaps).addTo(map);
+		
+		var geojsonlayer = L.geoJson(geojson, {onEachFeature: onEachFeature}).addTo(map);
+		
+		</script>	
+	</h3>
+	<h4>
+<p><a id="Resources" class="header" href="#Resources" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Resources</p>
+
+<p><a href="https://www.loc.gov/folklife/lomax/">Alan Lomax Collection at the Library of Congress </a> <br>
+<a href="http://www.amazon.com/The-Southern-Journey-Alan-Lomax/dp/0393081079">The Southern Journey of Alan Lomax: Words, Photographs, and Music by Tom Piazza </a></p>
+	</h4>    
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
