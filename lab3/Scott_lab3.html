@@ -17,10 +17,9 @@ p1{font-family:century; font-size:14px;
 <h1><font color = "black">Philadelphia's <font color = '84B058'>Best</font> and <font color = 'B05858'>Worst</font> Neighborhood Schools & Demographics<br></font></h1>
 <p1><font color = "black">Click each marker to view the school's racial demographics and performance index score. Red scores are lowest performing and green scores are highest performing. </font></p1><br>
  <div id = 'map' style="height: 600px;width: 800px;"></div>
-
 <script>
 var map = L.map('map').setView([39.9746138,-75.1478513], 14);
- = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
+var Esri_WorldStreetMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
 }).addTo(map)
 
