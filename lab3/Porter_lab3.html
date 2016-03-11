@@ -10,12 +10,12 @@
 	Map of Philadelphia Schools Closed by SRC in 2013
 	<div id='map' style="height:700px; width:700px"></div>
 	<script>
-	
-var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
+///// osm tile change to stamen toner
+///// geojson
+var tonerUrl = "http://tile.stamen.com/toner/{Z}/{X}/{Y}.png";
 var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 return s.toLowerCase();
 });
-
 
 var myGeoJSON = [
 	{
@@ -24,7 +24,7 @@ var myGeoJSON = [
 	{
 		"type": "Feature",
 		"properties": {
-		"Name": "<b>Alexander Wilson Elementary School</b>", 
+		"Name": "Alexander Wilson Elementary School", 
 		"url": "<http://cdn.phillymag.com/wp-content/uploads/2014/02/Alexander-Wilson-Elementary-School-6.jpg width=150 height=150" />"},
 		"geometry": {
 		"type": "Point", 
@@ -36,8 +36,7 @@ var myGeoJSON = [
 		"url": "http://greatphillyschools.org/uploads/files/905649872956685105-annapratt-photo.0.190.2592.1555.full.jpg width=150 height=150" />"},
 		"geometry": 
 		{"type": "Point", 
-		"coordinates": 
-		[39.989227, -75.169495]}},
+		"coordinates": [39.989227, -75.169495]}},
 	{
 		"type": "Feature",
 		"properties": {
@@ -45,10 +44,9 @@ var myGeoJSON = [
 		"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Shaw_School_Philly.JPG/1920px-Shaw_School_Philly.JPG width=150 height=150" />"},
 		"geometry": 
 		{"type": "Point", 
-		"coordinates": 
-		[39.941732, -75.226536]}},
+		"coordinates": [39.941732, -75.226536]}},
 		
-function onEachFeature(feature, layer)}
+function onEachFeature(feature, layer){
 popupOptions = {maxWidth: 400};
 if (feature.properties && feature.properties.Name) {layer.bindPopup(feature.properties.url + "<b>" + feature.properties.Name, popupOptions);}}
 	
