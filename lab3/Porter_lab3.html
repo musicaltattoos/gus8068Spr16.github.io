@@ -234,7 +234,7 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		"type": "Feature",
 		"properties": {
 		"Name": "Robert E. Lamberton High School", 
-		"url": "http://www.preservationalliance.com/directory/mcmar/images/large/1340049924.jpg width=150 height=150">"
+		"url": "http://www.preservationalliance.com/directory/mcmar/images/large/1340049924.jpg width=150 height=150" />"
 		},
 		"geometry": 
 		{"type": "Point", 
@@ -243,6 +243,73 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		]
 	}
 	},	
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Robert Fulton Elementary School", 
+		"url": "http://greatphillyschools.org/uploads/files/813587402641657124-fulton.0.50.1600.960.full.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[40.03953, -75.175219
+		]
+	}
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Roberts Vaux Promise Academy", 
+		"url": "http://greatphillyschools.org/uploads/files/181515065633965989-vaux-bldg.0.50.1600.960.full.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.975992, -75.174122
+		]
+	}
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Sheridan West Academy", 
+		"url": "http://greatphillyschools.org/uploads/files/435270663606499044-sheridanwest-photo.0.120.1600.960.full.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.999704, -75.098721
+		]
+	}
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "Stephen A. Douglas High School", 
+		"url": "http://media.starnewsphilly.com/assets/image/2014/01/22/maritimehorizontal_l692x424-eee.jpg?972eae5f54523dc17e68add7c5406025b753e228 width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.97636, -75.11694
+		]
+	}
+	},
+		{
+		"type": "Feature",
+		"properties": {
+		"Name": "University City High School", 
+		"url": "http://citypaper.net/cmsAdmin/uploads/thumb3/west-phila-university-city-hs_1.jpg width=150 height=150" />"
+		},
+		"geometry": 
+		{"type": "Point", 
+		"coordinates": 
+		[39.947687, -75.236769
+		]
+	}
+	},
+	]
+		}];
 var basemap = L.tileLayer(url, {
     subdomains: ['','a.','b.','c.','d.'],
     minZoom: 0,
@@ -250,7 +317,7 @@ var basemap = L.tileLayer(url, {
     type: 'png',
     attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
 });
-
+//add Geojson layer to the map ONCE the file is loaded.
 function onEachFeature(feature, layer) {
         layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
 }
