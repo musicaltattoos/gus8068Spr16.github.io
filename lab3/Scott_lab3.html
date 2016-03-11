@@ -37,7 +37,7 @@ map.addLayer(layer);
 //add Geojson layer to the map ONCE the file is loaded.
 function onEachFeature(feature, layer) {
     		if (feature.properties && feature.properties.Name) {
-        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Address);
+        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption);
     }
 }   
 var geoJsonFeature = [
@@ -47,7 +47,7 @@ var geoJsonFeature = [
       "properties": {
         "Name": "<b>Samuel Powel School</b>",
         "img": "<img src='linkhere' height=120 width=120/>",
-        "Address": "Black - 74.4 percent<br>White - 9.2 percent<br>Asian - 4.1 percent<br>Other - 11.6 percent<br><font color = "green"><b>SPP Score - 85.8</b></font>",
+        "Caption": "Black - 74.4",
         "markerColor": "#FFFFFF"
         },
       "geometry": {
