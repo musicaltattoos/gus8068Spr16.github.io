@@ -42,7 +42,27 @@ body {
 	map.addLayer(layer);
 		
 	// add GeoJSON layer to the map once file is loaded
-	L.geoJson(geojsonFeature).addTo(map);
+	function onEachFeature(feature, layer) {
+    		if (feature.properties && feature.properties.Name) {
+        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Address);
+	}
+}
+var geoJsonFeature = [
+	{"type": "FeatureCollection",
+  "features": [
+    {"type": "Feature",
+      "properties": {
+        "Name": "<b>XXX</b>",
+        "img": "<img src='http://www.packpeople.com/wp-content/uploads/2011/06/PAWS-logo-with-tagline.jpg' height=120 width=120/>",
+        "Address": "Address:100 N 2nd St,Philadelphia PA,19106",
+        "markerColor": "#00FF57"
+        },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.143401,39.952172]
+      }
+    },
+];
 	
 	      </script>
 </center>
