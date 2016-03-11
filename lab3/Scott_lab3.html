@@ -2,7 +2,6 @@
 <head>
 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
 <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-
 </head>
 <body>
 
@@ -18,6 +17,7 @@ p1{font-family:century; font-size:18px;
 <center>
 <h1><font color = "black">Philadelphia's <font color = '84B058'>Best</font> and <font color = 'B05858'>Worst</font> Neighborhood Schools & Demographics<br></font></h1>
 <p1><font color = "black">Click each marker to view the school's racial demographics and performance index score. Red scores are lowest performing and green scores are highest performing. </font></p1><br>
+ 
  <div id = 'map' style="height: 600px;width: 800px;"></div>
 
 <script>
@@ -29,9 +29,10 @@ var map = L.map('map', {
   scrollWheelZoom: true,
   center: [39.951557, -75.151643],
   zoom: 12,
-})
+});
 
 map.addLayer(layer);
+
 function onEachFeature(feature, layer) {
     if (feature.properties && feature.properties.Name) {
         layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.Caption.img + "<br>" + feature.properties);
@@ -52,16 +53,19 @@ var geoJsonFeature = [
         "type": "Point",
         "coordinates": [-75.143401,39.952172]
       }
-    }
+    },
+    ]
+}
+    
     ];
+    
     L.geoJson(geoJsonFeature, {
   				 onEachFeature: onEachFeature
   				 
  }).addTo(map);
 
 
-    
-   </script>
+  </script>
   </body>
   </html>
   
