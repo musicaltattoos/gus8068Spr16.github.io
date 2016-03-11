@@ -17,38 +17,50 @@ p1{font-family:century; font-size:18px;
 <h1><font color = "black">Philadelphia's <font color = '84B058'>Best</font> and <font color = 'B05858'>Worst</font> Neighborhood Schools & Demographics<br></font></h1>
 <p1><font color = "black">Click each marker to view the school's racial demographics and performance index score. Red scores are lowest performing and green scores are highest performing. </font></p1><br>
  <div id = 'map' style="height: 600px;width: 800px;"></div>
-<script src='scottjson.js'></script>
+
 <script>
 var map = L.map('map').setView([39.9746138,-75.1478513], 14);
 
-function onEachFeature(feature, layer){
-	if (feature.properties && feature.properties.popupContent){
-		layer.bindPopup(feature.properties.popupContent);
-	}
-}
-
-var geojsonMarkerOptions = {
-		    radius: 8,
-		    fillColor: "#ff7800",
-		    color: "#ff0000",
-		    weight: 1,
-		    opacity: 1,
-		    fillOpacity: 0.8
 
 var Esri_WorldStreetMap = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Source: Esri, DeLorme, NAVTEQ, USGS, Intermap, iPC, NRCAN, Esri Japan, METI, Esri China (Hong Kong), Esri (Thailand), TomTom, 2012'
-}).addTo(map);
+});
 
-L.geoJson([hospitaljson], {
-			pointToLayer: function (feature, latlng) {
-        			return L.circleMarker(latlng, geojsonMarkerOptions);
- 			}, onEachFeature: onEachFeature}).addTo(map);
+var map = L.map('map', {
+  scrollWheelZoom: true,
+  center: [39.951557, -75.151643],
+  zoom: 12,
+})
 
+map.addLayer(layer);
+function onEachFeature(feature, layer) {
+    if (feature.properties && feature.properties.Name) {
+        layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.Caption + "<br>" + feature.properties);
+    }
+var geoJsonFeature = [
+	{"type": "FeatureCollection",
+  "features": [
+    {"type": "Feature",
+      "properties": {
+        "Name": "<b>Samuel Powel School</b>",
+        "img": "<img src='http://www.packpeople.com/wp-content/uploads/2011/06/PAWS-logo-with-tagline.jpg' height=120 width=120/>",
+        "Caption": "<br> Black - 74.4 percent<br>White - 9.2 percent<br>Asian - 4.1 percent<br>Other - 11.6 percent<br><font color = "green"><b>SPP Score - 85.8</b></font>",
+        "markerColor": "#00FF57"
+        },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.143401,39.952172]
+      }
+    ];
+    
+    L.geoJson(geoJsonFeature, {
+  				 onEachFeature: onEachFeature
+  				 
+ }).addTo(map);
 
 
     
-  
-  </script>
+   </script>
   </body>
   </html>
   
