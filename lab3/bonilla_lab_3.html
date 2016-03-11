@@ -43,8 +43,7 @@ body {
 		
 	// add GeoJSON layer to the map once file is loaded
 	function onEachFeature(feature, layer) {
-    		if (feature.properties && feature.properties.Name) {
-        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption);
+        	layer.bindPopup(feature.properties.Name + "<br>" + "<br>" + feature.properties.Caption);
 	}
 	}
 	var geoJsonFeature = [
