@@ -70,13 +70,31 @@
       "features": [ {
         "type":"Feature",
       "properties": {
-          "OBJECTID": 1,
+          "OBJECTID": 2,
           "Name":"<b>Afton Elementary</b>",
           "url": "<imgsrc="http://www.sunrise-eng.com/uploads/gallery/21fd1f17606b8224ad5087f0a1e4475f.jpg"/>"
       },
         "geometry": {"type": "Point",
         "coordinates": [40.245704, -74.876651]
-        }}]}];
+        }},
+        
+    {"type":"Feature",
+      "properties":{
+          "OBJECTID": 3,
+          "Name":"<b> Quarry Hill Elementary",
+          "url": "<imsrc="http://pimdept.org/wp-content/uploads/2013/01/Pennsbury-Schools-QuarryHillELEM-300x192.jpg"/>"
+      },
+        "geometry": {"type":"Point",
+          "coordinates": [40.246121, -74.873373]
+        }},
+        ]}];
+        
+    function onEachFeature(feature, layer) {
+       popupOptions = {maxWidth: 150};
+        if (feature.properties && feature.properties.Name) {
+        layer.bindPopup(feature.properties.url + "<br>" + feature.properties.Name, popupOptions);
+    }
+	};
         
         
         
