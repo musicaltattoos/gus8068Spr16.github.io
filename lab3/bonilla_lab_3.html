@@ -65,6 +65,11 @@ var geoJsonFeature = [
     ]
 }
 ];
+
+ L.geoJson(geoJsonFeature, {
+ 	onEachFeature: onEachFeature
+  				 
+ }).addTo(map);
 	
 	      </script>
 </center>
