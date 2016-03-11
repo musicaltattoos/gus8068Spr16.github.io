@@ -18,6 +18,11 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
     return s.toLowerCase();
 });
 
+function onEachFeature(feature, layer) {
+       popupOptions = {maxWidth: 200};
+        if (feature.properties && feature.properties.Name) {
+        layer.bindPopup(feature.properties.url + "<br>" + feature.properties.Name, popupOptions)
+
 	var myGeoJSON = [{"type": "FeatureCollection", 
 	"featurtes": [{"type": "Feature", "properties": {"Name": "Alexander Wilson Elementary School", 
 	"url": "<http://cdn.phillymag.com/wp-content/uploads/2014/02/Alexander-Wilson-Elementary-School-6.jpg width=150 height=150" />"},
@@ -30,6 +35,7 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 	{"type": "Feature", "properties": {"Name": "Anna H. Shaw Middle School", 
 	"url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Shaw_School_Philly.JPG/1920px-Shaw_School_Philly.JPG width=150 height=150 />"},
 	"geometry": {"type": "Point", "coordinates": [39.941732, -75.226536]}},]}];
+	feature_group.addTo(map);
 
 var basemap = L.tileLayer(url, {
     subdomains: ['','a.','b.','c.','d.'],
