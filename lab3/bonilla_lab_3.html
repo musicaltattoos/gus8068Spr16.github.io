@@ -17,6 +17,31 @@ body {
 <title>Center City Construction Projects (2016)</title>
 
 <body>
+<style>
+/*
+ * These CSS rules affect the tooltips within maps with the custom-popup
+ * class. See the full CSS for all customizable options:
+ * https://github.com/mapbox/mapbox.js/blob/001754177f3985c0e6b4a26e3c869b0c66162c99/theme/style.css#L321-L366
+ */
+.custom-popup .leaflet-popup-content-wrapper {
+  background:#2c3e50;
+  color:#fff;
+  font-size:16px;
+  line-height:24px;
+  }
+.custom-popup .leaflet-popup-content-wrapper a {
+  color:rgba(255,255,255,0.5);
+  }
+.custom-popup .leaflet-popup-tip-container {
+  width:30px;
+  height:15px;
+  }
+.custom-popup .leaflet-popup-tip {
+  border-left:15px solid transparent;
+  border-right:15px solid transparent;
+  border-top:15px solid #2c3e50;
+  }
+</style>
 
 <center>
 <img src="http://i.imgur.com/rMo90bF.png" width="482" height="76" alt="boom"><br>
@@ -39,27 +64,14 @@ body {
   		zoom: 14
 	});
 
-	// Customize each added layer
-	map.markerLayer.on('layeradd', function(e) {
-    	var marker = e.layer,
-        feature = marker.feature;
-
-    	// Create custom popup content
-    	var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
-                            '<img src="' + feature.properties.image + '">' +
-                        '   <h2>' + feature.properties.city + '</h2>' +
-                        '</a>';
-
-    marker.setIcon(L.icon({
-        iconUrl: feature.properties.image
-    }));
-
-    // http://leafletjs.com/reference.html#popup
-    marker.bindPopup(popupContent,{
-        closeButton: false,
-        minWidth: 320
-    });
-});
+	map.addLayer(layer);
+		
+	// add GeoJSON layer to the map once file is loaded
+	function onEachFeature(feature, layer) {
+    		if (feature.properties && feature.properties.Name) {
+        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption);
+	}
+	}
 	var geoJsonFeature = [
 	{"type": "FeatureCollection",
   		"features": [
@@ -322,12 +334,10 @@ L.geoJson(geoJsonFeature, {
  	onEachFeature: onEachFeature
   				 
  }).addTo(map);
- 
- // Add features to the map
-map.markerLayer.setGeoJSON(geoJson);
 
 	
 	      </script>
 </center>
 </body>
 </html>
+
