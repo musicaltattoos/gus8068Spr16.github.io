@@ -306,8 +306,16 @@ body {
 }
 ];
 
+$.getJSON("philly.geojson",function(data){
+  var marker = L.icon({
+    iconUrl: 'http://www.megaicons.net/static/img/icons_sizes/22/119/128/location-map-icon.png',
+    iconSize: [60,50]
+  });
+  
  L.geoJson(geoJsonFeature, {
  	onEachFeature: onEachFeature
+ 	    pointToLayer: function(feature,latlng){
+	  return L.marker(latlng,{icon: ratIcon});
   				 
  }).addTo(map);
 	
