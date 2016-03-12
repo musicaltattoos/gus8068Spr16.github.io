@@ -241,10 +241,11 @@ var geoJsonFeature = [
 
 
     L.geoJson(geoJsonFeature, {
-  				 onEachFeature: onEachFeature
-  				 style: function(Polygon) { // i pout thjis in
+    		 style: function(Polygon) { // i pout thjis in
         switch (feature.properties.test) { // i pout thjis in
             case 'test': return {color: "#ff0000"};// i pout thjis in
+  				 onEachFeature: onEachFeature
+  			
            
  }).addTo(map);
 
