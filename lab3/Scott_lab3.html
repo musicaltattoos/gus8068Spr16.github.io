@@ -238,29 +238,11 @@ var geoJsonFeature = [
     }
 }, 
 
-{
-    "type": "Feature",
-    "properties": {"party": "Democrat"},
-    "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-            [-109.05, 41.00],
-            [-102.06, 40.99],
-            [-102.03, 36.99],
-            [-109.04, 36.99],
-            [-109.05, 41.00]
-        ]]
-    }
 }];
 
-L.geoJson(states, {
-    style: function(feature) {
-        switch (feature.properties.party) {
-            case 'Republican': return {color: "#ff0000"};
-            case 'Democrat':   return {color: "#0000ff"};
-        }
-    }
-}).addTo(map);   
+
+
+
     L.geoJson(geoJsonFeature, {
   				 onEachFeature: onEachFeature
   				 
