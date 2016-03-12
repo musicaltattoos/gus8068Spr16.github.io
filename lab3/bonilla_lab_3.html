@@ -10,6 +10,12 @@ body {
 }
 </style>
 
+<style>
+.leaflet-popup-content img {
+  max-width:100%;
+  }
+</style>
+
 <link rel="templeshortcut" type="image/ico" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Temple_T_logo.svg/80px-Temple_T_logo.svg.png"/>
 
 </head>
@@ -302,8 +308,25 @@ body {
       		}
     	},
     ]
-}
-];
+}];
+
+// Add custom popups to each using our custom feature properties
+myLayer.on('layeradd', function(e) {
+    var marker = e.layer,
+        feature = marker.feature;
+
+    // Create custom popup content
+    var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
+                            '<img src="' + feature.properties.image + '" />' +
+                            feature.properties.city +
+                        '</a>';
+
+    // http://leafletjs.com/reference.html#popup
+    marker.bindPopup(popupContent,{
+        closeButton: false,
+        minWidth: 320
+    });
+});
 
  L.geoJson(geoJsonFeature, {
  	onEachFeature: onEachFeature
