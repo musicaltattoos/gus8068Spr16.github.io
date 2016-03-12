@@ -46,6 +46,15 @@ body {
         	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption +  "<br>" + feature.properties.markerColor);
 	}
 	}
+	
+	var geojsonMarkerOptions = {
+		    radius: 8,
+		    fillColor: "#ff7800",
+		    color: "#ff0000",
+		    weight: 1,
+		    opacity: 1,
+		    fillOpacity: 0.8
+		    
 	var geoJsonFeature = [
 	{"type": "FeatureCollection",
   		"features": [
