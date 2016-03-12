@@ -10,12 +10,6 @@ body {
 }
 </style>
 
-<style>
-.leaflet-popup-content img {
-  max-width:100%;
-  }
-</style>
-
 <link rel="templeshortcut" type="image/ico" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Temple_T_logo.svg/80px-Temple_T_logo.svg.png"/>
 
 </head>
@@ -330,6 +324,12 @@ myLayer.on('layeradd', function(e) {
 
 // Add features to the map
 myLayer.setGeoJSON(geoJson);
+
+L.geoJson(geoJsonFeature, {
+ 	onEachFeature: onEachFeature
+  				 
+ }).addTo(map);
+
 	
 	      </script>
 </center>
