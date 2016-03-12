@@ -216,8 +216,11 @@ var geoJsonFeature = [
         "Caption": "Black - 32.4%<br>Latino - 63.3%<br>Other - 3.1%<br><b>SPP Score - 40.5</b>",
         "markerColor": "#00FFFF"
         },
+      "type": "Feature",
+    "properties": {"party": "Democrat"},  
      "geometry": {
         "type": "Polygon",
+        
         "coordinates":[[
         	[-104.05, 48.99],
             [-97.22,  48.98],
@@ -241,7 +244,12 @@ var geoJsonFeature = [
 
     L.geoJson(geoJsonFeature, {
   				 onEachFeature: onEachFeature
-  	
+  	style: function(feature) {
+        switch (feature.properties.party) {
+            case 'Republican': return {color: "#ff0000"};
+            case 'Democrat':   return {color: "#0000ff"};
+        }
+    }
  }).addTo(map);
 
 
