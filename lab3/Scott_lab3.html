@@ -243,8 +243,8 @@ var geoJsonFeature = [
     L.geoJson(geoJsonFeature, {
     	  style: function(polygon) {
         switch (polygon.properties.party) {
-            case 'Republican': return {color: "#ff0000"};
-            case 'Democrat':   return {color: "#0000ff"};
+            case 'Republican': return {color: "#00ffff"};
+            case 'Democrat':   return {color: "#000fff"};
         }
   				 onEachFeature: onEachFeature
  }).addTo(map);
