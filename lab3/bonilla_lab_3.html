@@ -39,14 +39,27 @@ body {
   		zoom: 14
 	});
 
-	map.addLayer(layer);
-		
-	// add GeoJSON layer to the map once file is loaded
-	function onEachFeature(feature, layer) {
-    		if (feature.properties && feature.properties.Name) {
-        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption);
-	}
-	}
+	// Customize each added layer
+	map.markerLayer.on('layeradd', function(e) {
+    	var marker = e.layer,
+        feature = marker.feature;
+
+    	// Create custom popup content
+    	var popupContent =  '<a target="_blank" class="popup" href="' + feature.properties.url + '">' +
+                            '<img src="' + feature.properties.image + '">' +
+                        '   <h2>' + feature.properties.city + '</h2>' +
+                        '</a>';
+
+    marker.setIcon(L.icon({
+        iconUrl: feature.properties.image
+    }));
+
+    // http://leafletjs.com/reference.html#popup
+    marker.bindPopup(popupContent,{
+        closeButton: false,
+        minWidth: 320
+    });
+});
 	var geoJsonFeature = [
 	{"type": "FeatureCollection",
   		"features": [
@@ -309,6 +322,9 @@ L.geoJson(geoJsonFeature, {
  	onEachFeature: onEachFeature
   				 
  }).addTo(map);
+ 
+ // Add features to the map
+map.markerLayer.setGeoJSON(geoJson);
 
 	
 	      </script>
