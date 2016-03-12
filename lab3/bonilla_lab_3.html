@@ -43,7 +43,7 @@ body {
 	// add GeoJSON layer to the map once file is loaded
 	function onEachFeature(feature, layer) {
     		if (feature.properties && feature.properties.Name) {
-        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption);
+        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption +  "<br>" + feature.properties.markerColor);
 	}
 	}
 	var geoJsonFeature = [
@@ -54,7 +54,7 @@ body {
         		"Name": "<center><strong>CITC  | Center City West</strong></center>",
         		"img": "<center><img src='http://i.imgur.com/QiYUVIn.jpg' height=200 width=300/></center>",
         		"Caption": "The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018.",
-        		"marker-color": "#ff8888"
+        		"markerColor": "#ff8888"
         		},
       		"geometry": {
         		"type": "Point",
