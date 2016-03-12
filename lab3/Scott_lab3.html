@@ -218,6 +218,7 @@ var geoJsonFeature = [
         },
      "geometry": {
         "type": "Polygon",
+        "properties": {"test": "test"},
         "coordinates":[[
         	[-104.05, 48.99],
             [-97.22,  48.98],
@@ -241,7 +242,10 @@ var geoJsonFeature = [
 
     L.geoJson(geoJsonFeature, {
   				 onEachFeature: onEachFeature
-  				 
+  				 style: function(Polygon) { // i pout thjis in
+        switch (feature.properties.test) { // i pout thjis in
+            case 'test': return {color: "#ff0000"};// i pout thjis in
+           
  }).addTo(map);
 
 
