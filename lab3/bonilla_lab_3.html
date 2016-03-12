@@ -60,7 +60,7 @@ body {
         		"Name": "<center><strong>CITC  | Center City West</strong></center>",
         		"img": "<center><img src='http://i.imgur.com/QiYUVIn.jpg' height=200 width=300/></center>",
         		"Caption": "The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018.",
-        		"markerColor": "#FFFFFF"
+        		"marker-color": "#ff8888"
         		},
       		"geometry": {
         		"type": "Point",
@@ -327,6 +327,9 @@ myLayer.on('layeradd', function(e) {
         minWidth: 320
     });
 });
+
+// Add features to the map
+myLayer.setGeoJSON(geoJson);
 
  L.geoJson(geoJsonFeature, {
  	onEachFeature: onEachFeature
