@@ -10,7 +10,7 @@ body{background-color:#51504E;
 }
 p1{font-family:book antiqua; font-size:32px;
 }
-p2{font-family:book antiqua; fount-size:22px;
+p2{font-family:book antiqua; font-size:22px;
 }
 </style>
 
@@ -30,7 +30,7 @@ p2{font-family:book antiqua; fount-size:22px;
 //load title layer
 var map = L.map('map', {
     scrollWheelZoom: false,
-    center: [40.7127837, -74.0059413],
+    center: [39.950998, -75.159787],
     zoom: 6
 });
 
@@ -41,9 +41,23 @@ function onEachFeature(feature, layer) {
         	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption);
     }
 }   
+var geoJsonFeature = [
+	{"type": "FeatureCollection",
+  "features": [
+    {"type": "Feature",  
+    "properties": {
+        "Name": "<b>Access Matters</b>",
+        "img": "<http://accessmatters.org/wp-content/uploads/2015/04/Co-Branded-Logo-with-Ruler-AccessMatters_CHOICE1.jpg' height=100 width=100/>",
+        "Caption": "<b>Accessmatters provides a variety of free healthcare services like family planning support and reproductive services. Located in Center City, Accessmatters adminsters confidential and rapid HIV testing, STD testing, and counseling services. As the name suggests, this organization works towards eliminating economic, social, cultural and geographic barriers to health care services. </b>",
+        "markerColor": "#4E4E4E"
+        },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-75.169156, 39.953056]
+	 }
+       },
 
 
-map.addLayer(layer);
 </script>
 </body>
 </html>
