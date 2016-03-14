@@ -24,15 +24,18 @@ p2{font-family:book antiqua; font-size:24px;
 <script>
  //intialize the map 
  
- var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}.png',{
+
+
+var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',{
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 });
-//load title layer
+
 var map = L.map('map', {
     scrollWheelZoom: false,
-    center: [39.950998, -75.159787],
+    center: [40.7127837, -74.0059413],
     zoom: 6
 });
+
 
 map.addLayer(layer);
 //add geoJson layer to the map when the file is loaded. 
