@@ -1,0 +1,163 @@
+<html>
+<head>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+</head>
+<body>
+	Ecotourism in Philadelphia
+	
+	<div id='map' style="height:800px; width:1200px"></div>
+	<script>
+	
+		var map = L.map('map').setView([39.9814408,-75.1572587], 13);
+
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    		attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+
+function onEachFeature(feature, layer) {
+        layer.bindPopup("<h1>"+feature.properties.name+"</h1><p>"+feature.properties.caption+"</p>"+feature.properties.img);
+}
+
+
+var geojsonlayer = L.geoJson(geo, {onEachFeature: onEachFeature}).addTo(map);
+ 
+
+
+
+
+var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+             'properties':{
+                 'name':'Hotel Warner',
+                 ‘caption’:'A unique eco-friendly hotel.',
+‘img’:’<img src=”http://www.hotelwarner.com/blog/wp-content/uploads/2015/11/rsz__mg_2213_4_5hdri_tonemapped-1.jpg”/>’},
+'geometry':{'type':'Point','coordinates':[-75.605701, 39.96105]}},
+L.geoJson(geojsonFeature, {
+        onEachFeature: onEachFeature
+		}).addTo(map)
+		
+		var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+             'properties':{
+                 'name':'Linvilla Orchard',
+                 ‘caption’:'Personally picked produce.',
+‘img’:’<img src=”http://img2.10bestmedia.com/Images/Photos/318169/Credit-Fran-Imhoff_54_990x660.JPG"/>},
+'geometry':{'type':'Point','coordinates':[-75.475477, 39.890111]}},
+L.geoJson(geojsonFeature, {
+        onEachFeature: onEachFeature
+		}).addTo(map)
+		
+		var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+             'properties':{
+                 'name':'Longwood Gardens',
+                 ‘caption’:'Acres of manicured gardens.',
+‘img’:’<img src=”http://www.thebrandywine.com/attractions/images/longwood_photo.jpg"/>},
+'geometry':{'type':'Point','coordinates':[-75.6747, 39.8712]}},
+L.geoJson(geojsonFeature, {
+        onEachFeature: onEachFeature
+		}).addTo(map)
+		
+		var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+             'properties':{
+                 'name':'Japanese Tea House',
+                 ‘caption’:'Traditional Japanese culture living with nature.',
+‘img’:’<img src=”http://www.visitphilly.com/resize/images/japanese-house-garden-philadelphia-587-587x0.jpg"/>},
+'geometry':{'type':'Point','coordinates':[-75.2147, 39.9753]}},
+L.geoJson(geojsonFeature, {
+        onEachFeature: onEachFeature
+		}).addTo(map)
+		
+		var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+             'properties':{
+                 'name':'Horticulture Center',
+                 ‘caption’:'Historic arboretum in Fairmount Park.',
+‘img’:’<img src=”http://static.panoramio.com/photos/large/69433376.jpg"/>},
+'geometry':{'type':'Point','coordinates':[-75.2123, 39.98431]}},
+L.geoJson(geojsonFeature, {
+        onEachFeature: onEachFeature
+		}).addTo(map)
+		
+		var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+             'properties':{
+                 'name':'Valley Green',
+                 ‘caption’:'A rustic, natural park.',
+‘img’:’<img src=”http://1.bp.blogspot.com/-XKetmP_4NK0/UFH-Q4WRrXI/AAAAAAAACk0/CIs8C3EGtr4/s1600/Vincent+Alleva+Jr+Devils+Pool+4.jpg"/>},
+'geometry':{'type':'Point','coordinates':[-75.2181, 40.05462]}},
+L.geoJson(geojsonFeature, {
+        onEachFeature: onEachFeature
+		}).addTo(map)
+		
+		var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+             'properties':{
+                 'name':'Valley Green Inn',
+                 ‘caption’:'Good food in an unparalleled setting.',
+‘img’:’<img src=”http://assets3.thrillist.com/v1/image/1158066/size/tl-horizontal_main/these-are-the-8-most-romantic-restaurants-in-philly"/>},
+'geometry':{'type':'Point','coordinates':[-75.218, 40.05462]}},
+L.geoJson(geojsonFeature, {
+        onEachFeature: onEachFeature
+		}).addTo(map)
+		
+		var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+             'properties':{
+                 'name':'Kelly Drive',
+                 ‘caption’:'One of the regions most popular running and jogging paths.',
+‘img’:’<img src=”http://blog.fitnesstrainer.com/wp-content/uploads/2015/06/kelly-drive.jpg"/>},
+'geometry':{'type':'Point','coordinates':[-75.2031, 39.98376]}},
+L.geoJson(geojsonFeature, {
+        onEachFeature: onEachFeature
+		}).addTo(map)
+		
+			var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+             'properties':{
+                 'name':'Belmont Plateau',
+                 ‘caption’:'The place where everybody goes, words of Will Smith.',
+‘img’:’<img src=”http://loveyourpark.org/wp-content/themes/LYP2012/images/background/baseball.jpg"/>},
+'geometry':{'type':'Point','coordinates':[-75.207, 39.988]}},
+L.geoJson(geojsonFeature, {
+        onEachFeature: onEachFeature
+		}).addTo(map)
+		
+		var myGeoJSON = {
+	‘type’ : ‘FeatureCollection’,
+	‘features’ : [
+		{'type':'Feature', 
+             'properties':{
+                 'name':'Fairmount Park',
+                 ‘caption’:'Big historic park with walking trails, sports fields, gardens, public art & a reservoir.');
+	.',
+‘img’:’<img src=”https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1375813617/fairmount-park-52013f22d3bf7e7f00000a5c.jpg"/>},
+'geometry':{'type':'Point','coordinates':[-75.2128, 40.0208]}},
+L.geoJson(geojsonFeature, {
+        onEachFeature: onEachFeature
+		}).addTo(map)
+		
+		</script>
+</body>
+</html>
