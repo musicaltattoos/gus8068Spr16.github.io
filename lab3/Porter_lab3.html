@@ -324,7 +324,7 @@ var basemap = L.tileLayer(url, {
 });
 
 var map = L.map('map').addLayer(basemap).setView([39.9588, -75.1676], 11)
- L.geoJson(geoJsonFeature, {onEachFeature: onEachFeature}).addTo(map);
+ L.geoJson(mygeoJsonFeature, {onEachFeature: onEachFeature}).addTo(map);
 
 
 	</script> 
