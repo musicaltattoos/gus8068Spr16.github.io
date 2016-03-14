@@ -312,8 +312,8 @@ var myGeoJson = [
 
 		
 function onEachFeature(feature, layer){
-popupOptions = {maxWidth: 400};
-if (feature.properties && feature.properties.Name) {layer.bindPopup(feature.properties.url + "<b>" + feature.properties.Name, popupOptions);}}
+	popupOptions = {maxWidth: 400};
+	if (feature.properties && feature.properties.Name) {layer.bindPopup(feature.properties.img + "<b>" + feature.properties.Name, popupOptions);}}
 	
 var basemap = L.tileLayer(url, {
     subdomains: ['','a.','b.','c.','d.'],
