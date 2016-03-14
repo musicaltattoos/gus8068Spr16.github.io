@@ -1,19 +1,22 @@
 <html>
 <head>
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-	<style>
-	body{background:black; font-size:32px;
-	</style>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
 </head>
 <body>
-	<h1>HIV Testing Facilities in Philadelphia</h1>
-	<p>A look at sexual health reasources in the City of Brothery Love</p>
-	<div id='map' style="height:800px; width:800px"></div>
-	<script>
-	var map = L.map('map').setView([39.9816609, -75.1474139], 13);
-	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
-	var geojsonlayer = L.geoJson(geo, {onEachFeature: onEachFeature}).addTo(map)
-	
-	</script>
-</body>
+
+<style>
+body{background-color:#51504E;
+}
+p1{font-family:book antiqua; font-size:32px;
+}
+p2{font-family:book antiqua; fount-size:22px;
+}
+</style>
+
+<center>
+<p1><font color = "black"> HIV Testing Facilities In Philadelphia</font></p1>
+<p2><font color = "black"> A look at sexual health reasources in the City of Brotherly Love</font></p2>
+
+ <div id = 'map' style="height: 800px;width: 1200px;"></div>
+</center>
