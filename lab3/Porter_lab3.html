@@ -16,8 +16,7 @@ var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 return s.toLowerCase();
 });
 
-var myGeoJson = [
-		{
+var myGeoJson = {
 		"type": "FeatureCollection", 
 		"featurtes": [
 		{
@@ -308,7 +307,7 @@ var myGeoJson = [
 	}
 	},
 	]
-		}];
+		};
 
 		
 function onEachFeature(feature, layer){
@@ -324,7 +323,7 @@ var basemap = L.tileLayer(url, {
 });
 
 var map = L.map('map').addLayer(basemap).setView([39.9588, -75.1676], 11)
- L.geoJson(geoJsonFeature, {onEachFeature: onEachFeature}).addTo(map);
+ L.geoJson(myGeoJson, {onEachFeature: onEachFeature}).addTo(map);
 
 
 	</script> 
