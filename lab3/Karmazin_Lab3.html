@@ -45,7 +45,8 @@
   
   <script>
    
-  var map = L.map('map').setView([40.208288, -74.845495], 12); 
+  var map = L.map('map') .addLayer(basemap) .setView([40.208288, -74.845495], 12)
+  		L.geoJson(myGeoJSON, {onEachFeature: onEachFeature}).addTo(map);
     
   var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
     var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
@@ -98,7 +99,7 @@ function onEachFeature(feature, layer){
 	{layer.bindPopup(feature.properties.img + "<b>" + feature.properties.Name, popupOptions);}}
 
   
-L.geoJson(geoJsonFeature, {onEachFeature: onEachFeature}).addTo(map);
+
         
         </script>
         </body>
