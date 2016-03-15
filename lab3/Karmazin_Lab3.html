@@ -67,10 +67,11 @@
       
       
   
-  var myGeoJSON = [{
-      "type": "FeatureCollection",
-      "features": [ {
-        "type":"Feature",
+  var myGeoJSON = [
+      {"type": "FeatureCollection",
+      "features": [ 
+        
+        {"type":"Feature",
       "properties": {
           "OBJECTID": 2,
           "Name":"<b>Afton Elementary</b>",
@@ -91,8 +92,13 @@
         }},
         ]}];
         
-        
+function onEachFeature(feature, layer){
+	popupOptions = {maxWidth: 400};
+	if (feature.properties && feature.properties.Name)
+	{layer.bindPopup(feature.properties.img + "<b>" + feature.properties.Name, popupOptions);}}
 
+  
+L.geoJson(geoJsonFeature, {onEachFeature: onEachFeature}).addTo(map);
         
         </script>
         </body>
