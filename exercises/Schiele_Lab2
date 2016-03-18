@@ -1,0 +1,31 @@
+<html>
+<head>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+</head>
+<body>
+	
+<style>
+	body{  background-color:#cbcac8;
+	}
+</style>	
+	
+	<center>
+	<h1><font color = "black">Sexual Health Reasources in Philadelphia<br></font></h1>
+	<font color = "black">Click each marker to see hours of operation, price, and types of services for each facility.</font>
+	<div id='map' style="height:600px; width:1000px"></div> </center>
+	<script>
+	
+		var map = L.map('map').setView([39.947047,-75.155054, 12);
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map)
+	
+	L.marker([39.953056, -75.169156]).addTo(map)
+       .bindPopup('<b>Access Matters</b><br> Hours of Operation : M-F 8:30am-4:45pm, Closed on Weekends<br>Services Provided : STD testing for chlamydia, gonorrhea, HIV, and syphilis<br>Fees: Free<br>;
+	
+	
+	</script>
+</body>
+
+ </html>
