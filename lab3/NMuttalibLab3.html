@@ -234,7 +234,7 @@ function onEachFeature(feature, layer) {
 	
 		var baseMaps = {
 		'Stamen Terrain': basemap_0	};
-		L.control.layers(baseMaps,{"Ecotourism in Philadelphia": exp_ecotourism},{collapsed:false}).addTo(map);
+		L.control.layers(baseMaps,{"Ecotourism in Philadelphia"},{collapsed:false}).addTo(map);
 			L.geoJson(geoJsonAL, {
 				 onEachFeature: onEachFeature
 			}).addTo(map);
