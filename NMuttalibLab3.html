@@ -25,8 +25,8 @@
 		<div id='map' style="height:900px; width:1600px"></div>
 
 <script>		
-var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
-var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
+var terrainUrl = "http://{S}tile.stamen.com/terrain/{Z}/{X}/{Y}.png";
+var url = terrainUrl.replace(/({[A-Z]})/g, function(s) {
 return s.toLowerCase();
 });
 	
@@ -55,7 +55,7 @@ var myGeoJSON = [
       "properties": {
         "OBJECTID": 3,
         "Name": "<b>Linvilla Orchard</b><br>Personally picked produce",
-        "url": "<img src='http://img2.10bestmedia.com/Images/Photos/318169/Credit-Fran-Imhoff_54_990x660.JPG' width=150 height=150/>"
+        "url": "<img src='http://img2.10bestmedia.com/Images/Photos/318169/Credit-Fran-Imhoff_54_990x660.jpg' width=150 height=150/>"
       },
       "geometry": {
         "type": "Point",
@@ -130,7 +130,7 @@ var myGeoJSON = [
       "properties": {
         "OBJECTID": 8,
         "Name": "<b>Valley Green Inn</b><br>Good food in an unparalleled setting",
-        "url": "<img src='http://assets3.thrillist.com/v1/image/1158066/size/tl-horizontal_main/these-are-the-8-most-romantic-restaurants-in-philly' width=150 height=150 />"
+        "url": "<img src='http://assets3.thrillist.com/v1/image/1158066/size/tl-horizontal_main/these-are-the-8-most-romantic-restaurants-in-philly.jpg' width=150 height=150 />"
       },
       "geometry": {
         "type": "Point",
