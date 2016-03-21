@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Ecotourism in Philadelphia</title>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+		<link rel="stylesheet" type="text/css" href="css/own_style.css">
+		<script src="http://cdn.leafletjs.com/leaflet-v0.7.7/leaflet.js"></script>
+		
+		<style>
+	.leaflet-popup-content-wrapper {
+	 }
+	</style>
+	</head>
+	<style>
+			body{ background-color:blue;
+			}
+			h1{font-weight:bold font-size 28px; color: green;
+			}
+	</style>
+	<body>
+			<center>
+			<h1>Ecotourism in Philadelphia</h>
+			<h2>By Na'Imah Muttalib</h2>
+			</center>
+			<div style="display:flex;justify-content:center;align-items:center;">
+		<div id='map' style="height:900px; width:1600px"></div>
+	
+		<script>		
+var tonerUrl = "http://{S}tile.stamen.com/terrain/{Z}/{X}/{Y}.png";
+var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
+return s.toLowerCase();
+});
+	
+var myGeoJSON = [
+  {
+ "type": "FeatureCollection",
+  "features": [
+   
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 2,
+        "Name": "<b>Hotel Warner</b><br>A unique eco-friendly hotel",
+        "url": "<img src='http://www.hotelwarner.com/blog/wp-content/uploads/2015/11/rsz__mg_2213_4_5hdri_tonemapped-1.jpg' width=150 height=150/>}"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.605701,
+          39.96105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 3,
+        "Name": "<b>Linvilla Orchard</b><br>Personally picked produce",
+        "url": "<img src='http://img2.10bestmedia.com/Images/Photos/318169/Credit-Fran-Imhoff_54_990x660.JPG' width=150 height=150/>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.475477,
+          39.890111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 4,
+        "Name": "<b>Longwood Gardens</b><br>Acres of manicured gardens",
+        "url":  "<img src='http://www.thebrandywine.com/attractions/images/longwood_photo.jpg' width=150 height=150 />"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.6747,
+          39.8712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 5,
+        "Name": "<b>Japanese Tea House</b><br>Traditional Japanese culture living with nature",
+        "url":  "<img src='http://www.visitphilly.com/resize/images/japanese-house-garden-philadelphia-587-587x0.jpg' width=150 height=150 />"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.2147,
+          39.9753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 6,
+        "Name": "<b>Horticulture Center</b><br>Historic arboretum in Fairmount Park",
+        "url":  "<img src='http://static.panoramio.com/photos/large/69433376.jpg' width=150 height=150 />"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.2123,
+          39.98431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 7,
+        "Name": "<b>Valley Green</b><br>A rustic, natural park",
+        "url": "<img src='http://1.bp.blogspot.com/-XKetmP_4NK0/UFH-Q4WRrXI/AAAAAAAACk0/CIs8C3EGtr4/s1600/Vincent+Alleva+Jr+Devils+Pool+4.jpg' width=150 height=150 />"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.2181,
+          40.05462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 8,
+        "Name": "<b>Valley Green Inn</b><br>Good food in an unparalleled setting",
+        "url": "<img src='http://assets3.thrillist.com/v1/image/1158066/size/tl-horizontal_main/these-are-the-8-most-romantic-restaurants-in-philly' width=150 height=150 />"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.218,
+          40.05462
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 9,
+        "Name": "<b>Kelly Drive</b><br>One of the regions most popular running and jogging paths",
+        "url": "<img src='http://blog.fitnesstrainer.com/wp-content/uploads/2015/06/kelly-drive.jpg' height=150 width=150 />"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.2031,
+          39.98376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 10,
+        "Name": "<b>Belmont Plateau</b><br>The place where everybody goes, words of Will Smith",
+        "url": "<img src='http://loveyourpark.org/wp-content/themes/LYP2012/images/background/baseball.jpg' height=150 width=150/>"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.207,
+          39.988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "OBJECTID": 11,
+        "Name": "<b>Fairmount Park</b><br>Big historic park with walking trails, sports fields, gardens, public art & a reservoir",
+        "url": "<img src='https://res.cloudinary.com/roadtrippers/image/upload/c_fill,h_316,w_520/v1375813617/fairmount-park-52013f22d3bf7e7f00000a5c.jpg' height=150 width=150 />"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -75.2128,
+          40.0208
+        ]
+      }
+    },
+    
+    
+  ]
+}
+  ];
+  	function onEachFeature(feature, layer) {
+       popupOptions = {maxWidth: 150};
+        if (feature.properties && feature.properties.Name) {
+        layer.bindPopup(feature.properties.url + "<br>" + feature.properties.Name, popupOptions);	
+	}
+		}
+var basemap = L.tileLayer(url, {
+    subdomains: ['','a.','b.','c.','d.'],
+    minZoom: 0,
+    maxZoom: 17,
+    type: 'png',  
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>,  under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
+});
+var map = L.map('map')
+		.addLayer(basemap)
+		.setView([39.9814408,-75.1572587], 13)
+		L.geoJson(myGeoJSON, {
+		onEachFeature: onEachFeature
+	}).addTo(map);
+		
+	</script>
+</body>
+</html>
