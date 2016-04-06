@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+	    
+<style>
+body {
+    background-color: white
+}
+</style>
+
+<link rel="templeshortcut" type="image/ico" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Temple_T_logo.svg/80px-Temple_T_logo.svg.png"/>
+
+</head>
+
+<title>Center City Construction Projects (2016)</title>
+
+<body>
+<body link="black">
+<style>
+/*
+ * These CSS rules affect the tooltips within maps with the custom-popup
+ * class. See the full CSS for all customizable options:
+ * https://github.com/mapbox/mapbox.js/blob/001754177f3985c0e6b4a26e3c869b0c66162c99/theme/style.css#L321-L366
+ */
+.custom-popup .leaflet-popup-content-wrapper {
+  background:#2c3e50;
+  color:#fff;
+  font-size:16px;
+  line-height:24px;
+  }
+.custom-popup .leaflet-popup-content-wrapper a {
+  color:rgba(255,255,255,0.5);
+  }
+.custom-popup .leaflet-popup-tip-container {
+  width:30px;
+  height:15px;
+  }
+.custom-popup .leaflet-popup-tip {
+  border-left:15px solid transparent;
+  border-right:15px solid transparent;
+  border-top:15px solid #2c3e50;
+  }
+</style>
+
+<center>
+<img src="http://i.imgur.com/rMo90bF.png" width="482" height="76" alt="boom"><br>
+<font face="Verdana" color="#000000">Center City's real estate market, encouraged by economic <a href="https://www.centercityphila.org/docs/SOCC2015.pdf">reinvestment</a>, has been booming. 
+<br>Click on the markers to check out current construction projects.</font><br><br>
+
+<div id='map' style="height:700px; width:1000px"></div>
+
+<script>
+	      
+	// initilize a map
+	var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png',{
+  		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
+	});
+		
+	// load a tile layer 
+	var map = L.map('map', {
+		scrollWheelZoom: false,
+  		center: [39.9635936, -75.1642056],
+  		zoom: 14
+	});
+	map.addLayer(layer);
+		
+	// add GeoJSON layer to the map once file is loaded
+	function onEachFeature(feature, layer) {
+    		if (feature.properties && feature.properties.Name) {
+        	layer.bindPopup(feature.properties.Name + "<br>" + feature.properties.img + "<br>" + feature.properties.Caption);
+	}
+	}
+	var geoJsonFeature = [
+	{"type": "FeatureCollection",
+  		"features": [
+    		{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>CITC  | Center City West</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/QiYUVIn.jpg' height=200 width=300/></center>",
+        		"Caption": "The Comcast Innovation and Technology Center is a skyscraper under construction. The 59-floor building, with a height of 342 m, will be the tallest building in the Western Hemisphere outside of Manhattan and Chicago. It will likely be complete by early 2018.",
+        		"markercolor": "#ff8888"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.170423, 39.955241]
+      		}
+    	},
+    		{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>SLS  | Avenue of the Arts</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/mcIz9N9.jpg' height=200 width=300/></center>",
+        		"Caption": "Commissioned by Dranoff Properties, the 47 story tower broke ground in Spring of 2015. It will feature 125 condos and 150 hotel rooms, combining a four or five star hotel with uber-luxe condos and entertainment space.",
+        		"markerColor": "#FFFFFF"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.164491, 39.946752]
+      		}
+    	},
+    		{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>Temple  | Temple University</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/GvTIPRb.jpg' height=200 width=300/></center>",
+        		"Caption": "Constructed by Norweigan firm Snohetta, this building will serve as a library. The library will feature an automated book retrieval system. Construction is expected to begin soon, with an opening scheduled for Fall 2018.",
+        		"markerColor": "#FF0000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.154491, 39.981884]
+      		}
+    	},
+    		{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>Fashion Outlets of Philadelphia  | Market East</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/O6hJLw0.jpg' height=200 width=300/></center>",
+        		"Caption": "The Gallery was long considered a dead mall. The Fashion Outlets of Philadelphia serves as a complete remodeling of this site in an effort to revitalize and attract retailers. The grand opening is expected sometime in 2017.",
+        		"markerColor": "#FFFFFF"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.156573, 39.951561]
+      		}
+    	},
+    		{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>CHOP Schuykill Project  | Southwest Center City</strong></center>",
+        		"img": "<center><img src='https://i.imgur.com/wLfvzND.jpg' height=200 width=300/></center>",
+        		"Caption": "Childrens Hospital is planning to develop Schuylkill Avenue into office and research space over the next few decades. The first phase of this involves the erection of a 22-story office tower at the base of Bainbridge Street.",
+        		"markerColor": "#FFFFFF"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.186156, 39.945156]
+      		}
+    	},
+		{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>Cira Centre South  | University City</strong></center>",
+        		"img": "<center><img src='https://i.imgur.com/23h0Az2.jpg' height=200 width=300/></center>",
+        		"Caption": "This project is a complex of two skyscrapers, consisting of the commercial Cira Walnut Tower and the residential Cira Chestnut Tower. The Cira Chestnut tower is already complete.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.183081, 39.952453]
+      		}
+    	},
+    			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>PPA 8th and Filbert Garage  | Market East</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/Ua7M1kf.png' height=200 width=300/></center>",
+        		"Caption": "The focus of the project is to turn the 8th Filbert garage into a gateway between Chinatown and Market Street by improving the streetscape. The project includes equipping the parking garage with façades, green elements, new interior paint and lights,as well as playful LED lights hanging over 8th Street.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1535168, 39.9520481]
+      		}
+    	},
+    			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>Church of Jesus Christ of Latter-day Saints | Logan Square</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/FeisY8J.jpg' height=200 width=300/></center>",
+        		"Caption": "The temple will include stained glass along the length of the building, a landscaped plaza with reflecting pool and public gardens, underground parking, and a 200-foot double spire meant to resemble that of Independence Hall’s.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1677083, 39.9578301]
+      		}
+    	},
+   			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>W Hotel and Element by Westin | Center City West</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/6fL8zOS.jpg' height=200 width=300/></center>",
+        		"Caption": "Once the project is completed, its market value is expected to reach $95.8 million and generate $220.6 million in incremental tax revenues over 20 years.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1731933, 39.9499681]
+      		}
+    	},
+   			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>Reading Viaduct (Phase 1) | Callowhill</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/nUJIBk8.jpg' height=200 width=300/></center>",
+        		"Caption": "The Reading Viaduct project seeks to transform the abandoned railway that slices through the area between Chinatown and Fairmount Avenue into a public park. The Center City District was drawn to the project because of the success of the High Line project in New York City, and saw an opportunity to add residential and light commercial development in the expanding communities of Center City and Chinatown.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1588801, 39.9589223]
+      		}
+    	},
+   			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>LOVE Park | Hahnemann</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/U92s5dx.jpg' height=200 width=300/></center>",
+        		"Caption": "Mayor Michael A. Nutter and City Council President Darrell L. Clarke reached an agreement that allows for the rehabilitation of John F. Kennedy Plaza, known as LOVE Park.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1646024, 39.9546836]
+      		}
+    	},
+  			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>Penn's Landing Park | Riverfront</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/RZpCtyJ.jpg' height=200 width=300/></center>",
+        		"Caption": "The park will end at the waterfront in a large public space, framed by an amphitheater. By creating this public amenity, the hope is that the $250 million investment will spur the private aspects of the development — residences, restaurants, and shops — estimated at $800 million to $1 billion.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1400256, 39.9474086]
+      		}
+    	},
+  			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>One Riverside | Rittenhouse Square</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/gRrb51k.jpg' height=200 width=300/></center>",
+        		"Caption": "The new 22-story glass skyscraper will feature 82 condominiums with high-level finishes and balconies, 110 underground parking spaces, fitness center, in-door pool, club room, hospitality suite, and business center.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1766015, 39.9506821]
+      		}
+    	},
+  			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>500 Walnut | Old City</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/IZ7aaOE.jpg' height=200 width=300/></center>",
+        		"Caption": "The amenity-rich building will have 38 condominiums and offer everything from a multi-level, glass-enclosed fitness center to a large outdoor terrace overlooking Independence National Historic Park.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1495185, 39.94733971]
+      		}
+    	},
+  			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>1919 Market Street | Center City West</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/0RGQqPi.jpg' height=200 width=300/></center>",
+        		"Caption": "The 29-story tower will be built on a vacant lot on the corner of Market and 20th Streets and will contain retail on the ground floor and offices on the second, as well as concierge service and various amenities including a rooftop fitness center, demonstration kitchen, game room, and a ledge pool.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1748003, 39.9534988]
+      		}
+    	},
+  			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>1128 Chestnut Street | Market East</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/AZXQURR.png' height=200 width=300/></center>",
+        		"Caption": "The development will include 112 high-end rental units and 95,000 SF of commercial space, with dedicated parking for retail.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1607392, 39.950207]
+      		}
+    	},
+  			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>205 Race Street | Independence Mall</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/WH3XA2l.jpg' height=200 width=300/></center>",
+        		"Caption": "The mixed-use apartment complex on the long-vacant corner of 2nd and Race streets will include 146 rental units, 28 parking spaces, 100 bike parking spaces, and 14,000 SF of commercial space on the ground floor. The building will be 51 feet tall along Race Street and rise to just over 187 feet along 2nd Street. The building is on target to be the first LEED Gold residential high-rise in Center City.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1466897, 39.9543831]
+      		}
+    	},
+  			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>Rodin Square | Logan Square</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/sRom8Lt.jpg' height=200 width=300/></center>",
+        		"Caption": "The development will include 293 luxury apartment units, 500 parking spaces and 85,000 SF of retail on the ground floor.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1708877, 39.9615064]
+      		}
+    	},
+  			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>East Market (Phase 1) | Market East</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/2Js93tz.png' height=200 width=300/></center>",
+        		"Caption": "The project will be a combination of pedestrian-oriented retail, new residential rental apartments, office space, parking, signage, and hospitality uses. Phase I of the $500 million-plus mixed-use project aims to upgrade Philadelphia’s downtown retail district east of Broad Street.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1604689, 39.9517231]
+      		}
+    	},
+  			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>Eastern Tower Community Center | Chinatown</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/cHudGzD.jpg' height=200 width=300/></center>",
+        		"Caption": "The program is designed to attract foreign investment in projects that promote economic growth and job creation.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1559059, 39.9569541]
+      		}
+    	},
+  			{"type": "Feature",
+      			"properties": {
+        		"Name": "<center><strong>One Water Street | Riverfront</strong></center>",
+        		"img": "<center><img src='http://i.imgur.com/jeRHwQd.png' height=200 width=300/></center>",
+        		"Caption": "The high-rise will have a 13-story wing on the south side and a 16-story wing on the north side. The building will have 250 units, approximately 65% one-bedroom units and 35% two- and three-bedroom units. The One Water Street grounds will also include two public green spaces.",
+        		"markerColor": "#008000"
+        		},
+      		"geometry": {
+        		"type": "Point",
+        		"coordinates": [-75.1417374, 39.954814]
+      		}
+    	},
+    ]
+}];
+L.geoJson(geoJsonFeature, {
+ 	onEachFeature: onEachFeature
+  				 
+ }).addTo(map);
+	
+	      </script>
+</center>
+</body>
+</html>
