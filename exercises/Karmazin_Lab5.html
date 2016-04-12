@@ -1,26 +1,7 @@
 <html>
-  <head> 
-    <script src="reqwest.min.js"></script>
-    <script src="Leaflet.Instagram/dist/Leaflet.Instagram.js"></script> 
-
-  
-   
-    <center>
-      <div id = "mapid"></div>
-      <div id = "mapid" style="height:600px; width:900px"></div>
-    </center>
-  </head>
-  
-  <script>
-    
-      L.instagram(“https:api.instagram.com/v1/media/search?lat=39.99309&lng=-75.15271&access_token=[7152a19c9a9d4f5baf6e994cf399b84e]).addTo(mapid) ;
-  </script>
-  
-    
-
-
-
-
-
-
+  var xhr = new XMLHttpRequest();
+      xhr.open("GET", "http://burnsr77.github.io/GH_demo/PACo.geojson", false) ;
+  var APIresponse = xhr.responseText ;
+      xhr.send() ;
+      "alert()" ;
 </html>
