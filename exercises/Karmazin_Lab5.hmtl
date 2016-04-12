@@ -1,10 +1,13 @@
 <html>
-var xhr = new XMLHttpRequest();
-xhr.open("GET", "https://www.codecademy.com/files/samples/javascript_learn_apis.xml", false);
+  <script src="reqwest.min.js"></script>
+  <script src="Leaflet.Instagram/dist/Leaflet.Instagram.js"></script> 
 
-xhr.setRequestHeader('Content-Type', 'text/xml');
-xhr.send();
 
-xmlDocument = xhr.responseXML;
-console.log(xmlDocument.childNodes['0'].textContent);
+
+
+
+
+
+
+
 </html>
