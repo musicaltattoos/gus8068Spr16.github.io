@@ -1,3 +1,4 @@
+<html>
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "https://www.codecademy.com/files/samples/javascript_learn_apis.xml", false);
 
@@ -6,3 +7,4 @@ xhr.send();
 
 xmlDocument = xhr.responseXML;
 console.log(xmlDocument.childNodes['0'].textContent);
+</html>
