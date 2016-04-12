@@ -1,13 +1,14 @@
 <html>
-  <script>
-    var map = L.map('map').setView([40.208288, -74.845495], 12); 
-      L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map); 
-  </script>
-  <div id='map' style="height:600px; width:900px"></div>
-  <script src="reqwest.min.js"></script>
-  <script src="Leaflet.Instagram/dist/Leaflet.Instagram.js"></script> 
+  <head> 
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  
+  <div id = "mapid"></div>
+  <div> #map {style="height:800px; width:1000px"></div>
+  
+  var mymap = L.map("mymapid").setView ([39.99309, 75.15271] 10) ;
+  </head>
+    
 
 
 
