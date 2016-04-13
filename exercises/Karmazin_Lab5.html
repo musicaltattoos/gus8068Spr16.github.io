@@ -8,7 +8,11 @@
     <div id='map' style="height:600px; width:900px"></div>
     
     <script>
-  
+  	var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
+	var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
+	return s.toLowerCase();
+	});
+	
       var basemap = L.tileLayer(pk.eyJ1Ijoiamthcm1hejYiLCJhIjoiY2ltM3ZjNTdjMDAwNXR6bTZ1NXU4M3A3NyJ9.b-8StdJWFpLK7LrLLermJg), {
       subdomains: ['','a.','b.','c.','d.'],
       minZoom: 0,
