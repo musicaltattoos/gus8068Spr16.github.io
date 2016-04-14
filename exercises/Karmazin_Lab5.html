@@ -1,33 +1,26 @@
 <html>
-<head>
+	<head>
+		<title> Instagram Posts on Temple University Campus</title>
 
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
-  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
-</head>
-  	<center>
-	<div id='map' style="height:600px; width:900px"></div>
-  	</center>
+  		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  		<link rel="stylesheet" href="Leaflet.Instagram/dist/Leaflet.Instagram.css"/>
+  		<script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  </head>
   
-  <script>
-  	var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
-	var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
-	return s.toLowerCase();
-	});
-	
-	var basemap = L.tileLayer(url, {
-    		subdomains: ['','a.','b.','c.','d.'],
-    		minZoom: 0,
-    		maxZoom: 17,
-    		type: 'png',  
-    		attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>,  under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-		});
-	var map = L.map('map')
-		.addLayer(basemap)
-		.setView([40.208288, -74.845495], 12)
-		L.geoJson(myGeoJSON, {
-	 	onEachFeature: onEachFeature
-		}).addTo(map);
-	
+  <body>
+  		<center>
+	<div id='map' style="height:600px; width:900px"></div>
+  		</center>
+  		
+  	<script> src="https://gus8068Spr16.github.io/reqwest.min.js"> </script>
+  	<script> src="https://gus8068Spr16.github.io/Leaflet.Instagram/dist/Leaflet.Instagram.js"> </script>
+	<script> 
+		var map = L.map('map').setView([39.980929, -75.156696], 14) ;
+		var url = 'https://api.instagram.com/v1/media/search?lat=39.952186&lng=-75.163272&access_token=256164975.c9600e9.7a9aeb07284e4220bdddeaddcbedee38' ;
+			L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        			attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        			}).addTo(map);
+        		L.instagram(url).addTo('map') ;
 	
         </script>
      </body>
