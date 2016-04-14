@@ -28,7 +28,7 @@
     		attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>,  under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
 		});
 		
-		var map = L.map('map').addLayer(basemap).setView([39.980929, -75.156696], 16) ;
+		var map = L.map('map').addLayer('basemap').setView([39.980929, -75.156696], 16) ;
 		
 		L.instagram(link).addTo(map);
 		
