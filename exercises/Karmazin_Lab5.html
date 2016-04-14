@@ -17,9 +17,9 @@
 	<script> 
 		
 		var access = '256164975.c9600e9.7a9aeb07284e4220bdddeaddcbedee38';
-		var url = "https://api.instagram.com/v1/media/search?lat=39.980929&lng=-75.156696&access_token="+access;
- 			L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { attribution: 'Map data Â© <a href="http://openstreetmap.org">OpenStreetMap</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>', maxZoom: 19, minZoom: 7 }).addTo(map); 
- 			L.instagram(url).addTo(map);
+		var link = "https://api.instagram.com/v1/media/search?lat=39.980929&lng=-75.156696&access_token="+access;
+ 		 
+ 	
  		var basemap = L.tileLayer(url, {
     		subdomains: ['','a.','b.','c.','d.'],
     		minZoom: 0,
@@ -29,6 +29,8 @@
 		});
 		
 		var map = L.map('map').addLayer(basemap).setView([39.980929, -75.156696], 16) ;
+		
+		L.instagram(link).addTo(map);
 		
 	
         </script>
