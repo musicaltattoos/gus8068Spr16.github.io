@@ -15,7 +15,10 @@
   	<script> src="https://gus8068Spr16.github.io/reqwest.min.js"> </script>
   	<script> src="https://gus8068Spr16.github.io/Leaflet.Instagram/dist/Leaflet.Instagram.js"> </script>
 	<script> 
-		
+		var tonerUrl = "http://{S}tile.stamen.com/toner/{Z}/{X}/{Y}.png";
+		var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
+		return s.toLowerCase();
+		});
 		var access = '256164975.c9600e9.7a9aeb07284e4220bdddeaddcbedee38';
 		var link = "https://api.instagram.com/v1/media/search?lat=39.980929&lng=-75.156696&access_token="+access;
  		 
