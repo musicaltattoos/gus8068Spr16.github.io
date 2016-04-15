@@ -28,10 +28,8 @@
 		});
 		var map = L.map('map')
 			.addLayer(basemap)
-			.setView([39.980929, -75.156696], 12)
-			L.geoJson(myGeoJSON, {
-	 		onEachFeature: onEachFeature
-			}).addTo(map);
+			.setView([39.980929, -75.156696], 12) ;
+			
 		
 		
 		var access = '256164975.c9600e9.7a9aeb07284e4220bdddeaddcbedee38';
