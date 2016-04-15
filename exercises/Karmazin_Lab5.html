@@ -19,13 +19,9 @@
 		var url = tonerUrl.replace(/({[A-Z]})/g, function(s) {
 		return s.toLowerCase(); 
 		});
-		var basemap = L.tileLayer(url, {
-    		subdomains: ['','a.','b.','c.','d.'],
-    		minZoom: 0,
-    		maxZoom: 17,
-    		type: 'png',  
+		var basemap = L.tileLayer(url, { attribution: 'Map data Â© <a href="http://openstreetmap.org">OpenStreetMap</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',   
     		attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>,  under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://creativecommons.org/licenses/by-sa/3.0">CC BY SA</a>'
-		});
+		maxZoom: 19, minZoom: 7 }).addTo(map); 
 		var map = L.map('map').addLayer('basemap').setView([39.980929, -75.156696], 16) ;
 		
 		
